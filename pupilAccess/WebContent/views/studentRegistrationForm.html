@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta charset="ISO-8859-1">
+        <title>Registration Form</title>
+         <link rel="stylesheet" type="text/css"
+                href="../styles/pupilAcessStyleSheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"><!--link to external style sheet for font-->
+        </head>
+        <body>
+            <header><!--This is the header of the page common across all pages-->
+                 <div class="title_container w3-tangerine" id="top" ><!-- begining of title container -->
+                    <p class="w3-jumbo"><b>Fatima Jinnah Dental College</b></p>
+                 </div>
+
+                <div class ="menu_container"><!--main flex container having flex item -->
+                <div class="menu_item"><!--menu item containing the logo-->
+                    <img src="../images/logo.jpg" width="100px" height="100px"/>
+                </div>
+                <div class="menu_item"><!--the navagation bar of the page with drop down menu-->
+                    <nav>
+                        <ul>
+                            <li>
+                                
+                                <a href="../index.html">Home</a>
+                            </li>
+                            <li class="dropdown"><a href="departments.html">Departments</a><!--Nested ul and li for dropdown-->
+                                <ul>
+                                    <li class="dropdown-content"><a href="departments.html">Clinical</a></li>
+                                    <li class="dropdown-content"><a href="departments.html">Pre-Clinical</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="studentRegistrationForm.html">Registration</a>
+                            </li>
+                            
+                            <li>
+                                <a href="studentLogin.html"> Student Login</a>
+                            </li>
+                            <li>
+                                <a href="contactus.html">Contact Us</a>
+                                <li>
+                                <a href="videos.html">Videos</a>
+                            </li>
+                            <li><!--animation used on search bar-->
+                                <input class="animation" name="searchbar" placeholder="search" type="searchbar" color="white">
+                            </li>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div><!-- end of menu container -->
+
+        </header>
+
+<!--This is the registration form for student registration-->
+
+        <div class="bluecontainer">
+            
+            <div class="form">
+                <div class="title">Welcome New Users</div>
+                <form>
+			    <table cellspacing="10" >
+				
+				<tr>
+					<td ><input class="indent" id="user" name="username" type="text" placeholder="Username" required size="35" pattern="[A-Za-z0-9]{5,20}" /></td>
+				</tr>
+				
+				<tr>
+					<td><input class="iconpassword indent" id="password" name="pass" type ="password" placeholder="Choose your password" size="35" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+						required /></td>
+				</tr>
+				
+  				<tr>
+					<td><input class="indent" id="password" name="confirm" type ="password" placeholder="Confirm password" size="35"
+						pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" required /></td>
+				</tr>
+				
+				<tr>	
+					<td><input class="indent" id="email" name="email" type ="email"   placeholder="Email" size="35"
+						 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"required /></td>
+				</tr>
+				<tr>
+					<td><input  id="firstname" name="first" type ="text" placeholder="FirstName" 
+						pattern="[A-za-z]" size="15"required />
+						<input id="lastname" name="last" type ="text" placeholder="LastName" required size="15" /></td>
+                </tr>
+                
+                <tr>
+					<td><input class="indent" id="dateofbirth" name="dob" type ="date" placeholder="dateofbirth" size="15"
+						 required /><input  id="courseyear" name="course" type ="number" placeholder="courseyear" 
+						 size="15"required /></td>
+				</tr>
+				
+				<tr>
+					<td><select name="gender" id="gender" style="width:100%; color:grey;" required>
+						<optgroup >
+							<option value="" disabled selected>Gender</option>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+							<option value="Other">Other</option>
+						</optgroup>
+					</select></td>
+				</tr>
+				</table><br/>
+						
+					<input type="checkbox" name="checkbox" required ><span class="text">I agree with terms and conditions.</span><br/><br/>
+			
+						
+					<button>Register</button>
+				
+			
+			</form>
+			</div>
+        </div>
+                    
+             
+        </div>
+            <!--footer of the page containing link to top of page, copyright and webmaster email-->
+             <footer>
+                <div class="footer">
+                    <a href="#top">Back To Top</a><br />
+                    &copy Kokab Askary<br />
+                    WebMaster:kokabaskary@gmail.com
+                </div>
+            </footer>
+        </body>
+</html>

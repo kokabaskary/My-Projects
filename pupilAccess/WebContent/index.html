@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta charset="ISO-8859-1">
+        <title>Home Page</title>
+        <link rel="stylesheet" type="text/css"
+                href="./styles/pupilAcessStyleSheet.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"><!--link to external style sheet for font-->
+        </head>
+        <body>
+            <header><!--This is the header of the page common across all pages-->
+                 <div class="title_container w3-tangerine" id="top" ><!-- begining of title container -->
+                    <p class="w3-jumbo"><b>Fatima Jinnah Dental College</b></p>
+                 </div>
+
+                <div class ="menu_container"><!--main flex container having flex item -->
+                <div class="menu_item"><!--menu item containing the logo-->
+                    <img src="./images/logo.jpg" width="100px" height="100px"/>
+                </div>
+                <div class="menu_item"><!--the navagation bar of the page with drop down menu-->
+                    <nav>
+                        <ul>
+                            <li>
+                                
+                                <a href="index.html">Home</a>
+                            </li>
+                            <li class="dropdown"><a href="./views/departments.html">Departments</a><!--Nested ul and li for dropdown-->
+                                <ul>
+                                    <li class="dropdown-content"><a href="./views/departments.html">Clinical</a></li>
+                                    <li class="dropdown-content"><a href="./views/departments.html">Pre-Clinical</a></li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="./views/studentRegistrationForm.html">Registration</a>
+                            </li>
+                            
+                            <li>
+                                <a href="./views/studentLogin.html"> Student Login</a>
+                            </li>
+                            <li>
+                                <a href="./views/contactus.html">Contact Us</a>
+                            </li>
+                             <li>
+                                <a href="./views/videos.html">Videos</a>
+                            </li>
+                            <li><!--animation used on search bar-->
+                                <input class="animation" name="searchbar" placeholder="search" type="searchbar" color="white">
+                            </li>
+                        </ul>
+                        
+                    </nav>
+                </div>
+            </div><!-- end of menu container -->
+
+        </header>
+        
+       <main class="main">
+            <!--main class containing two blocks that are not repeated across other pages-->
+
+            <div class="welcome">
+                <p class="para">
+                            <strong>Welcome to FJDC</strong><br/>
+                Fatima Jinnah Dental College believes in building skills for success. 
+                By offering a high-quality educational experience combined with a welcoming atmosphere,
+                FJDC is positioned to assist you with meeting your educational and professional needs.
+
+                Our Pre clinical campus located in Korangi Creek, it is just a short 15 minute drive
+                from D.H.A. or P.E.C.H.S. A “State of the Art” purpose built huge campus is the ideal 
+                for students to study, play, and learn while working towards their degree.
+
+                Our admission officers are always available to help you learn more about our faculty,
+                academic programs, and facilities.
+                        </p>
+                        <button><!--Link to the official page-->
+                           <a href="http://www.fjdc.edu.pk/" style="background-color:#66A3BF;">For more information visit</a>
+                        </button>
+
+            </div>
+           
+                </main>
+
+                <!--footer of the page containing link to top of page, copyright and webmaster email-->
+             <footer>
+                <div class="footer">
+                    <a href="#top">Back To Top</a><br />
+                    &copy Kokab Askary<br />
+                    WebMaster:kokabaskary@gmail.com
+                </div>
+            </footer>
+      
+        <!--Main container ends here-->
+
+
+        </body>
+</html>

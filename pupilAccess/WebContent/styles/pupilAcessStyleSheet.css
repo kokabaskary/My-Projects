@@ -1,0 +1,323 @@
+@charset "ISO-8859-1";
+
+ * {
+            box-sizing: border-box;
+
+        }
+
+        *:before,*:after {
+            box-sizing: inherit;
+        }
+
+
+        /*-----------------heading styling--------------------------------*/
+        .title_container {/*styling the main heading of the page*/
+            color:  #66A3BF;
+            font-size: 1em;
+            text-align: center; }
+            
+        .w3-tangerine {/*defining a class for main title of page with an wxternal style font*/
+            font-family: "Tangerine", serif;
+        }
+         /*----------------- styling of body and ul and links--------------------------------*/
+
+         html, body{
+            margin:0;
+            padding:0;
+          background-color:lightgrey;
+
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        li{
+            list-style-type: none;
+        }
+        /*----------------- styling of menu container--------------------------------*/
+        .menu_container{
+		display: flex;
+		padding: 20px;
+		background-color: #66A3BF;
+		font-family: cursive;
+		font-weight: 300;
+		color: white;
+}
+
+      /*  .menu_item{
+            flex: 1;
+        }*/
+
+       
+
+        .menu_container/*menu item are flexbox for the nav , ul, li ,a*/
+        .menu_item nav ul{
+            display: flex;
+        }
+
+        .menu_container
+        .menu_item nav ul li a{
+            color: white;
+            padding: 21px 37px;
+            border-radius: 3px;
+        }
+
+        .menu_container
+        .menu_item nav ul li a:hover{
+            background-color:#66A3BF;
+            color: #1c1808
+        }
+
+        /*-----------------------------dropdown menu----------------------*/
+
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            background-color:#66A3BF;
+            color: white;
+            border: none;
+ }
+        
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #66A3BF;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #66A3BF;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown a:hover {
+            background-color: #66A3BF;
+        }
+        /*-------------------Footer Styling------------------------*/
+        footer {
+		display: flex;
+		padding: 20px;
+		background-color:#66A3BF;
+		font-family: cursive;
+		font-weight: 300;
+        color: white;
+        align-self: flex-end;
+}
+
+        a:visited { 
+        color:white;
+        }
+
+        a:link { 
+        color:white;
+        }
+            /*------------------------styling for the main content of the page------------------*/
+
+            .main .mainVideo{/*{attributes for the main container of home page*/
+            display: flex;
+            height: 100%;
+            font-size: 2rem;
+            justify-content:center;
+            color:#66A3BF;
+            text-align: center;
+            }
+
+         .welcome,.video, aside{/*two container of main ,.form, */
+            padding: 1.5em;
+            width: 40%;
+            height: 85%;
+        }
+        
+        .para{
+            font-size: 1rem;
+            justify-content:space-around;
+            color:white;
+            text-align: center;
+            padding:5px;
+            border:8px solid #999999;
+            background-color: #66A3BF;
+
+        }
+            
+        .video,aside {/*two container of main */
+            padding: 1em;
+            width: 40%;
+            height: 40%;
+        }
+        .video{border:8px solid #999999;
+            background-color: #66A3BF;}
+
+            /*----------------------Registration Form Styling------------------*/
+
+            .bluecontainer{
+                background-color:#66A3BF;
+                display: flex;
+                width:35%;
+                height:525px;
+                text-align:center;
+                margin-top: 10px;
+                margin-bottom: 10px;
+	            margin-left: 30%;
+                padding:25px;
+                border:8px solid #999999;
+                justify-content: center;
+				
+            }
+            p{
+                font-family: "Times New Roman", Times, serif;
+                color:white;}
+
+                .text{
+                font-family: "Times New Roman", Times, serif;
+                color:white;
+                font-size:1em;}
+                
+                td{height:25px;}
+                
+             .form {/*form container for login, registration and contactus page*/
+            padding: 1em;
+            width: 100%;
+            height: 85%;
+            padding: 1em;  
+            
+                padding-left:20px;
+                border-left:100px;
+                text-align:justify;
+                
+            }	
+
+            .indent{text-indent:20px}
+
+            .title{
+                padding-top:2%;
+                padding-left:5%;
+                color:white;
+            }
+
+            button{
+                color:  #66A3BF;
+            }
+            /*------------------CONTACT PAGE STYLING--------------------*/
+
+            /*attributes for contact form page*/
+        .mainContact,.login {/*main container of contact form contact us page and login page */
+            display: flex;
+            height: 500px;
+            width:100%;
+            font-size: 1rem;
+            justify-content:space-around;
+            color:white;
+            text-align: center;
+            }
+
+        
+
+        .text{/*Main text of contact form*/
+            color:white;
+            text-align:center;
+            margin-top:2%;}
+
+        .mainForm{/*form attributes*/
+            justify-content: center;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            line-height: 1em;
+            height:450px;
+            margin-left: 6px;
+            padding:50px;
+            border-radius:3%;
+            color:white ;
+            font-size: 1rem;
+            
+            text-align: center;
+            padding:35px;
+            border:8px solid #999999;
+            background-color:#66A3BF ;
+        }
+
+        /*--------------------Login Page Styling------------------------*/
+        .loginForm{/*form attributes*/
+            justify-content: center;
+            margin-top: 5%;
+            margin-bottom: 5%;
+            line-height: 1em;
+            height:300px;
+            margin-left: 6px;
+            padding:50px;
+            border-radius:3%;
+            color:white ;
+            font-size: 1rem;
+            
+            text-align: center;
+            padding:35px;
+            border:8px solid #999999;
+            background-color:#66A3BF ;
+        }
+        .inputText{/*styling of the input text contact page and student login page*/
+            font-size: 1.25rem;
+            text-align: initial;
+            width:100%;
+            background-color:white ;
+            border:none;
+            outline: none;
+            border-radius:3px;
+            padding:4px ;
+        }
+
+       .mainForm .inputText #name:focus:invalid{
+            border: solid 3px #b7334d;
+        }
+        #backcolor{/*styling of send button*/
+            width:30%;
+            height: 23px;
+            background-color:grey;
+            color: white;
+        }
+   /*------------------------------Animation-------------------------------*/     
+        .animation {
+           
+            width: 100px;
+            height: 25px;
+           
+            background-color:#66A3BF;
+            -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+            transition: width 2s;
+            }
+
+        .animation:hover {
+            width: 200px;
+            background-color:white;
+            }
+
+            .animated-box{
+            width:600px;
+            height:20px;
+            background-color:white;
+            animation-name:flash;
+            animatiom-delay:1s;
+            animation-iteration-count:3;
+            animation-fill-mode:both;
+            animation-duration:5s;
+            animation-direction:alternate;
+        }
+
+
+
+        @keyframes flash{/*refer to slide 11*/
+            from{opacity:1;}
+            to{opacity:0;}
+	        	}        

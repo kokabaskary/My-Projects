@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+        <head>
+            <meta charset="ISO-8859-1">
+            <title>Contact US</title>
+            <link rel="stylesheet" type="text/css"
+                href="../styles/pupilAcessStyleSheet.css">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine"><!--link to external style sheet for font-->
+        </head>
+        <body>
+            <header><!--This is the header of the page common across all pages-->
+                 <div class="title_container w3-tangerine" id="top" ><!-- begining of title container -->
+                    <p class="w3-jumbo"><b>Fatima Jinnah Dental College</b></p>
+                 </div>
+
+                <div class ="menu_container"><!--main flex container having flex item -->
+                <div class="menu_item"><!--menu item containing the logo-->
+                    <img src="../images/logo.jpg" width="100px" height="100px"/>
+                </div>
+                <div class="menu_item"><!--the navagation bar of the page with drop down menu-->
+                    <nav>
+                        <ul>
+                            <li>
+                                
+                                <a href="../index.html">Home</a>
+                            </li>
+                            <li class="dropdown"><a href="departments.html">Departments</a><!--Nested ul and li for dropdown-->
+                                <ul>
+                                    <li class="dropdown-content"><a href="departments.html">Clinical</a></li>
+                                    <li class="dropdown-content"><a href="departments.html">Pre-Clinical</a></li>
+                                    
+                                </ul>
+                            </li>
+                            
+                            <li>
+                                <a href="studentRegistrationForm.html">Registration</a>
+                            </li>
+                            
+                            <li>
+                                <a href="studentLogin.html"> Student Login</a>
+                            </li>
+                            <li>
+                                <a href="contactus.html">Contact Us</a>
+                            </li>
+                             <li>
+                                <a href="videos.html">Videos</a>
+                            </li>
+                            <li><!--animation used on search bar-->
+                                <input class="animation" name="searchbar" placeholder="search" type="searchbar" color="white">
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div><!-- end of menu container -->
+
+        </header>
+
+
+
+         
+                    
+                    <main class="mainContact"><!--main class -->
+                <form >
+                   
+                    <div class="mainForm ">
+                         <h1 >Keep in Touch</h1>
+                        <label for ="name">Name</label><br/>
+                        <input class="inputText" id="name" type="text"  required pattern="[A-Za-z0-9]{5,20}"/><br/>
+                        <label for ="email">Email</label><br/>
+                        <input class="inputText" id="email" type="email"  required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"/><br/>
+                        <label for ="subject">Subject</label><br/>
+                        <input class="inputText" id="subject" type="text" /><br/>
+                        <label for ="message">Message</label><br/>
+                        <textarea class="inputText" rows="6" cols="47"></textarea><br/><br/>
+				        <button id="backcolor">Send</button>
+                    </div>
+
+                </form>
+              </main>
+
+             
+                    
+
+
+         <!--footer of the page containing link to top of page, copyright and webmaster email-->
+             <footer>
+                <div class="footer">
+                    <a href="#top">Back To Top</a><br />
+                    &copy Kokab Askary<br />
+                    WebMaster:kokabaskary@gmail.com
+                </div>
+            </footer>
+
+    </body>
+</html>
