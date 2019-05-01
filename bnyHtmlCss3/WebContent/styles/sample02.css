@@ -1,0 +1,20 @@
+.main_container {
+  margin: 0;
+  padding: 0;
+  width: 300px;
+  height: 400px;
+  border: 12px solid;
+  border-color: red;
+}
+.main_container background {
+  color: aqua;
+  image: url("");
+}
+.main_container nav {
+  padding: 0;
+}
+.main_container nav ul:hover {
+  box-shadow: 1px 1px 10px red;
+}
+
+/*# sourceMappingURL=sample02.css.map */
