@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Explicit Implicit Grids</title>
+<link rel="stylesheet" type="text/css"
+	href="../styles/flexBoxExternalStyleSheet.css">
+</head>
+<body>
+	<header>
+		<!-- This is the page header containing navagation links and logo -->
+
+		<div id="top"></div>
+		<!-- link from footer of the page to the top -->
+
+		<center>
+			<h1>Let's Learn About Explicit & Implicit Grids</h1>
+		</center>
+		<! -- Include a nav to link other pages -->
+
+
+		<div class="menu_container">
+			<div class="menu_item">
+				<img alt="logo" src="./images/logo.jpg">
+			</div>
+			<div class="menu_item">
+				<nav>
+					<ul>
+						<li><a href="./index.html">Home</a></li>
+						<li><a href="gridTermnologies.html">Grid Terminologies</a></li>
+						<li><a href="explicitAndImplicitGrids.html">Explicit &
+								Implicit Grids</a></li>
+						<li><a href="#">Contact</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- end of menu container -->
+	</header>
+	<!-- End of header section -->
+
+	<div class="mainContainer">
+		<h1>Explicit and Implicit Grid</h1>
+		<p class="text_paragraph">When we use grid-template-columns and grid-template-rows we
+			create an Explicit Grid. However if we try and place an item outside
+			of that grid the browser will create an Implicit Grid line or lines
+			in order to hold that item. In the code below I have put e between
+			grid column lines 4 and 5, these are not described with
+			grid-template-rows, so an implicit grid line 5 is created. By default
+			the implicit grid tracks created by the implicit lines will be auto
+			sized. However, you can size the tracks with the grid-auto-columns
+			and grid-auto-rows properties. I have sized my auto tracks as 100px
+			to match the rest of the column tracks in my grid.</p>
+			
+			<p>CSS Code</p>
+			<pre>
+			
+						body {
+			  margin: 40px;
+			}
+			.wrapper {
+			        display: grid;
+			    grid-gap: 10px;
+			        grid-template-columns: 100px 100px 100px;
+			    grid-auto-columns: 100px;
+			        background-color: #fff;
+			        color: #444;
+			    }
+			
+			    .box {
+			        background-color: #444;
+			        color: #fff;
+			        border-radius: 5px;
+			        padding: 20px;
+			        font-size: 150%;
+			
+			    }
+			
+			  .a {
+			        grid-column: 1 / 3;
+			        grid-row: 1;
+			    }
+			    .b {
+			        grid-column: 3 ;
+			        grid-row: 1 / 3;
+			    }
+			    .c {
+			        grid-column: 1 ;
+			        grid-row: 2 ;
+			    }
+			    .d {
+			        grid-column: 2;
+			        grid-row: 2;
+			    }
+			
+			    .e {
+			        grid-column: 4 / 5;
+			        grid-row: 1 / 4;
+			    }
+						
+			
+			</pre>
+			
+			
+
+		<h4>Result</h4>
+		<img alt="grid lines" src="../images/Capture.PNG">
+
+		
+
+	<footer>
+		<div class="footer">
+		<!-- This is the page footer containing link to top of page, copyright, webmaster information -->
+			<a href="#top">Go to top</a>
+			<p>CopyRight &copy 2019</p>
+			<p>Updated: Feb 14,2019</p>
+			<p>webmaster: kokabaskary@sample.com</p>
+		</div>
+	</footer>
+</body>
+</html>

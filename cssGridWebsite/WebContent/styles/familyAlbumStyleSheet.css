@@ -1,0 +1,206 @@
+
+@charset "ISO-8859-1";
+ /*The box-sizing property defines how the width and height of an element are calculated:
+             should they include padding and borders, or not.
+             border-box	The width and height properties (and min/max properties)
+              includes content, padding and border*/
+
+        * {
+            box-sizing: border-box;
+            }
+
+         *:before, *:after {
+            box-sizing: inherit;
+            }
+
+        .outerContainer {/*attributes for main outer container*/
+            width: 100%;
+            max-width: 1200px;
+            height: 700px;
+            margin: 0 auto;
+           }
+
+        header, footer {/*attributes for header and footer*/
+            width: 100%;
+            padding: 1em;
+            font-size: 1rem;
+            color: white;
+                }
+         footer {
+            /*footer flex set to appear at the end*/
+            align-self: flex-end;
+            background-color: #b7334d;
+        }
+
+
+         body {
+            width: 100%;
+            height: 100%;
+            overflow-x: hidden;
+            font-size: 100%;
+            line-height: 1.5;
+          /*  font-size: 10px;*/
+             font-family: Courier, Monaco, monospace;
+             background-color: #e6e6e6;
+            }
+
+
+        .main,.mainContact, .mainVideo {/*attributes for the main container of home page*/
+            display: flex;
+            height: 100%;
+            font-size: 2rem;
+            justify-content:space-around;
+            color:#b7334d;
+            text-align: center;
+            }
+
+         .welcome,.form,.video, aside {/*two container of main */
+            padding: 1.5em;
+            width: 40%;
+            height: 85%;
+        }
+        .para{
+            font-size: 1rem;
+            justify-content:space-around;
+            color:white;
+            text-align: center;
+            padding:5px;
+            border:8px solid #999999;
+            background-color: #b7334d;
+
+        }
+            
+        /*aside {
+            background-color: lightgreen;
+            }*/
+        .welcome, .video {
+            
+            padding: 1em;
+            }
+
+        footer {/*footer flex set to appear at the end*/
+            align-self: flex-end;
+            }
+
+
+         .nav{/*styling the navagition bar by removing any bulletpoint*/
+            list-style:none;
+        }
+        .nav a{/*removing underline from the links*/
+            text-decoration:none;
+           
+            padding:0 1em;
+            color: white;
+            font-size:1em;
+        }
+
+        a:link {/* unvisited link */
+            color: white;
+             text-decoration: none;
+            }
+           
+        a:visited { /* visited link */
+            color: white;
+            text-decoration: none;
+            }
+         a:hover {
+            background-color: #9f2d44;
+            }
+
+        .menuBackground{/*background color of the menu*/
+            background:#b7334d;
+        }
+        .heading{color:#b7334d;/*styling the main heading of the page*/
+            font-size:2em;
+            text-align:center;
+        
+        }
+        .flex-container{/*container in the header for navagiaton menu*/
+            display:flex;
+            width: 100%;
+            font-size: 1.5rem;
+            justify-content:space-around;
+        }
+
+        img{
+            width:100%;
+            padding:5px;
+            border:8px solid #999999;
+            background-color: #e6e6e6;
+        }
+
+
+        .my-btn {
+            margin-left: auto;
+            margin-right: auto;
+            background-color:#b7334d;
+            border-radius: 10%;
+            justify-content: space-around;
+            color: white;
+            width: 50%; 
+            height: 30px;
+}
+
+        .btn-container {
+            text-align: center;
+        }
+/*attributes for contact form page*/
+        .mainContact {/*main container of contact form*/
+            display: flex;
+            height: 100%;
+            width:100%;
+            font-size: 1rem;
+            justify-content:space-around;
+            color:white;
+            text-align: center;
+            }
+
+        .form {/*form container*/
+            padding: 1em;
+            width: 40%;
+            height: 85%;
+            padding: 1em;
+}
+        .text{/*Main text of contact form*/
+            color:#cc0000;
+            text-align:center;
+            margin-top:2%;}
+
+        .mainForm{/*form attributes*/
+            justify-content: center;
+            margin-top: 10%;
+            line-height: 1em;
+            height:450px;
+            margin-left: 6px;
+            padding:50px;
+            border-radius:3%;
+            color:white ;
+            font-size: 1rem;
+            
+            text-align: center;
+            padding:35px;
+            border:8px solid #999999;
+            background-color: #b7334d;
+        }
+        .inputText{/*styling of the input text*/
+            font-size: 1.25rem;
+            text-align: initial;
+            width:100%;
+            background-color:#d9d9d9 ;
+            border:none;
+            outline: none;
+            border-radius:3px;
+            padding:4px ;
+        }
+
+        #name:focus:invalid{
+            border: solid 3px #b7334d;
+        }
+        #backcolor{/*styling of send button*/
+            width:30%;
+            height: 20px;
+            background-color: #b7334d;
+            color: white;
+        }
+        
+
