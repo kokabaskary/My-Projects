@@ -1,0 +1,20 @@
+@charset "ISO-8859-1";
+	.box1{
+	width:100px;
+	height:100px;
+	background-color:red;
+	border:5px lightblue;
+	transition-property:background-color, border, height, width; 
+	transition-duration: 2s, 2s, 2s, 2s;
+	/*if everything takes 2s then do the following
+		transition-duration: 2s;*/
+	}
+	
+	.box1:hover{
+	 width:150px;
+	 height:60px;
+	 background-color:red;
+	 border:5px dashed red;
+	 background-color:lightskyblue;
+	 }
+	
