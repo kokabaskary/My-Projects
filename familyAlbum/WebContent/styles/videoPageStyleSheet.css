@@ -1,0 +1,57 @@
+
+@charset "ISO-8859-1";
+ 
+
+        .mainVideo {/*attributes for the main container of home page*/
+            display: flex;
+            height: 100%;
+            font-size: 2rem;
+            justify-content:space-around;
+            color:white;
+            text-align: center;
+            }
+
+         .video,aside {/*two container of main */
+            padding: 1em;
+            width: 40%;
+            height: 85%;
+        }
+        .para{
+            font-size: 1rem;
+            justify-content:space-around;
+            color:white;
+            text-align: center;
+             padding:5px;
+            border:8px solid #999999;
+            background-color: #b7334d;
+
+        }
+            
+        aside {
+            background-color: lightgreen;
+            }
+
+        .welcome {
+            background-color: orange;
+            padding: 1em;
+            }
+
+      
+
+      
+        .menuBackground{/*background color of the menu*/
+            background:#b7334d;
+        }
+        .heading{color:#b7334d;/*styling the main heading of the page*/
+            font-size:2em;
+            text-align:center;
+        
+        }
+       
+        img{
+            width:100%;
+            padding:5px;
+            border:8px solid #999999;
+            background-color: #e6e6e6;
+        }
+

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="ISO-8859-1">
+    <title>Contact US</title>
+    <link rel="stylesheet" type="text/css" href="../styles/familyAlbumStyleSheet.css">
+    
+
+    </head>
+    <body>
+        < class="outerContainer"><!--main container-->
+            <header><!--header of the page containing nav and menu bar-->
+                <div class="heading" id="top">
+                    <p>My Family Album</p>
+                 </div>
+                
+                  <nav class="flex-container menuBackground">
+                     
+                     <ul class="nav  flex-container">
+                         <li><a href="../index.html">Home</a></li>
+                         <li><a href="ourStory.html">Our Story</a></li>
+                         <li><a href="familyTree.html">Family Tree</a></li>
+                         <li><a href="contactUs.html">Keep In Touch</a></li>
+                         <li><a href="photosVideos.html">Photos & Videos</a></li>
+                     </ul>
+                    </nav>
+               
+            </header>
+
+            
+
+            <main class="mainContact"><!--main class -->
+                <form >
+                    <h1 class="text">Keep in Touch</h1>
+                    <div class="mainForm ">
+                        <label for ="name">Name</label><br/>
+                        <input class="inputText" id="name" type="text" placeholder="name" required pattern="[A-Za-z0-9]{5,20}"/><br/>
+                        <label for ="email">Email</label><br/>
+                        <input class="inputText" id="email" type="email"  required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"/><br/>
+                        <label for ="subject">Subject</label><br/>
+                        <input class="inputText" id="subject" type="text" /><br/>
+                        <label for ="message">Message</label><br/>
+                        <textarea class="inputText" rows="7" cols="47"></textarea><br/><br/>
+				        <button id="backcolor">Send</button>
+                    </div>
+
+                </form>
+              </main>
+
+            <footer><!--footer of the page containing link to top of page, copyright and webmaster email-->
+            <div>
+                <a href="#top">Back To Top</a><br/>
+                 &copy Kokab Askary<br/>
+                 WebMaster:kokabaskary@gmail.com</div>
+            </footer>
+        </div>
+    </body>
+</html>
+
+<!--
+                    -->
