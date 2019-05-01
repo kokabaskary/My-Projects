@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta charset="ISO-8859-1">
+        <title>Book Prototype</title>
+        </head>
+        <body>
+            <script>
+                 console.log("\n\n\n**********************\n\n\n");
+
+        var Book = function(title, authorFullName, yearPublication){
+        this.title = title;
+        this.authorFullName = authorFullName;
+        this.yearPublication = yearPublication;
+        this.description = "";
+        this.type = "";
+        this.edition = 0;
+        this.printLabel1830 = function(number){
+            for(var i=0; i<=number; i++ ){
+            console.log("\n***************************\n");
+            console.log("   Title :" + this.title);
+            console.log("   Author :" + this.authorFullName);
+            console.log("    :" + this.yearPublication);
+            console.log("   Description :" + this.description);
+            console.log("\n***************************\n");
+           }          
+         }}
+    var jsBook = new Book("JavaScript", "Raza", 2019);
+          console.log(jsBook.printLabel1830(4));
+
+        var book1 = new Book("aaaa", "nnnnnn", 2018);
+        var book2 = new Book("bbbbb", "nnmmf", 2019);
+        book1.totalPages = 999;
+        Book.prototype.cover = "Hard Cover";
+
+         console.log(jsBook);
+         console.log(book1);
+         console.log(book2);
+
+          console.log("\n\n**************slide 6 Prototype*****************************\n\n");
+
+         var simpleObj = function(c){
+             this.city = c;
+         }
+         var live1 = new simpleObj("Brooklyn");
+         var live2 = new simpleObj("Bronx");
+         live2.state = "New York";
+         console.log(live1);
+         console.log(live2);
+         
+
+
+          console.log("\n\n***************slide 7 Prototype****************************\n\n");
+
+                   var simpleObj = function(c){
+             this.city = c;
+         }
+         var live1 = new simpleObj("Brooklyn");
+         var live2 = new simpleObj("Bronx");
+         simpleObj.prototype.state = "New York";
+         console.log(live1);
+         console.log(live2);
+         console.log(live2.prototype === live1.prototype);
+
+  console.log("\n\n\n************slide 9**********\n\n\n");
+
+        var Instructor = function(fName, lName, cT = []){
+        this.firstName = fName;
+        this.lastName = lName;
+        this.classTeaching = cT;
+        this.employer = "Platform";
+          }
+          Instructor.prototype.info = function(){
+              console.log(this.firstName,
+                            this.lastName,
+                            "is employed by",
+                            this.employer)
+          }          
+         
+         
+                
+            </script>
+        </body>
+</html>
