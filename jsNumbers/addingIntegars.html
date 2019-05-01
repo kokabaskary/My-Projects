@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Adding Integars</title>
+</head>
+
+<body>
+    <script>
+                /*
+                Write a program sum.html that reads a sequence of integers 
+                from promt method, and reports their sum.
+                Example:If you have the following numbers 
+                (this is one single input):10 15 16 -7 102 345
+                then it should report:
+                481*/
+             
+                 let userInput = prompt("Enter a series of  integers:" );
+                 let userInputArray = userInput.split(" ");//creating an array to store the user input
+                    console.log(userInput);
+
+                // First split the string on spaces:   spiliting the array in spaces and numbers.
+                 console.log( 'userInputArray' , userInputArray);
+
+                //  Then convert the result array of strings into integers:
+
+                 let sum = 0;
+                //      for(let i =0; i<userInputArray.length; i++){
+                   
+                //     sum += Number(userInputArray[i]);//
+                  
+                // }
+               
+                //    //using forEach() method to iterate through the array and sums it up
+                   userInputArray.forEach(function(value){sum +=Number(value);});
+                   console.log(userInputArray);
+                    console.log(sum);
+
+                console.log(" The sum of the array is : " +sum);
+
+
+
+    </script>
+</body>
+
+</html>
