@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Form</title>
+	<link rel="stylesheet"
+		  type="text/css"
+		  href="../styles/FormValidationStyleSheet.css">
+	
+	
+	</head>
+	<body>
+		<div class="bluecontainer">
+			<div class="title"><p >Forms with Icons</p></div>
+			<div class="form">
+			<form >
+			<table cellspacing="10" >
+				
+				<tr>
+					<td ><input class="indent" id="user" name="username" type="text" placeholder="Username" required size="35" pattern="[A-Za-z0-9]{5,20}" /></td>
+				</tr>
+				
+				<tr>
+					<td><input class="iconpassword indent" id="password" name="pass" type ="password" placeholder="Choose your password" size="35" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+						required /></td>
+				</tr>
+				
+  				<tr>
+					<td><input class="indent" id="password" name="confirm" type ="password" placeholder="Confirm password" size="35"
+						pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}" required /></td>
+				</tr>
+				
+				<tr>	
+					<td><input class="indent" id="email" name="email" type ="email"   placeholder="Email" size="35"
+						 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"required /></td>
+				</tr>
+				<tr>
+					<td><input  id="firstname" name="first" type ="text" placeholder="FirstName" 
+						pattern="[A-za-z]" size="15"required />
+						<input id="lastname" name="last" type ="text" placeholder="LastName" required size="15" /></td>
+				</tr>
+				
+				<tr>
+					<td><select name="gender" id="gender" style="width:100%;" required>
+						<optgroup >
+							<option value="" disabled selected>Gender</option>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+							<option value="Other">Other</option>
+						</optgroup>
+					</select></td>
+				</tr>
+				</table><br/>
+						
+					<input type="checkbox" name="checkbox" required ><span class="text">I agree with terms and conditions.</span><br/><br/>
+					<input type="checkbox" name="checkbox"  required><span class="text">I want to recieve news and offers.<span class="text"><br/><br/>
+						
+					<button>Sign up</button>
+				
+			
+			</form>
+			</div>
+			</div>
+			
+	</body>
+</html>

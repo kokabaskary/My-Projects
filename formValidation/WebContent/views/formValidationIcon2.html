@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="ISO-8859-1">
+	<title>Form</title>
+	<link rel="stylesheet"
+		  type="text/css"
+		  href="../styles/FormValidationStyleSheet.css">
+	<link rel="stylesheet" 
+		  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	</head>
+	<body>
+		<div class="bluecontainer">
+		<p >Forms with Icons</p>
+		<div>
+			<form >
+			<table >
+				
+				<tr>
+					<td><div class="input-container">
+   						 <i class="fa fa-key icon"></i>
+    					<input class="input-field" type="text" placeholder="Username" name="username" required size="30" pattern="[A-Za-z0-9]{5,20}" />
+				</div></td>
+  				</tr>
+  				
+				<tr>
+					<td><div class="input-container">
+						<i class="fa fa-key icon"></i>
+						<input id="password" name="confirm" type ="password" placeholder="Choose your password" size="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+						required /></div></td>
+				</tr>
+				
+				<tr>
+					<td><div class="input-container">
+						<i class="fa fa-key icon"></i>
+						<input id="password" name="pass" type ="password" placeholder="Confirm password" size="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,20}"
+						required /></div></td>
+				</tr>
+				
+  				
+  				<tr>
+					<td><div class="input-container">
+   						 <i class="fa fa-key icon"></i>
+    					<input class="input-field" type="email" placeholder="Email" name="mail" required size="30" pattern="[A-Za-z0-9]{5,20}" 
+    					 pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"required/>
+				</div></td>
+  				</tr>
+  				
+  				<div>
+  					<tr>
+						<td><input id="firstname" name="first" type ="text" placeholder="FirstName" 
+						pattern="[A-za-z][^-]"required size="12"/>
+						<input id="lastname" name="last" type ="text" placeholder="LastName" required size="12" /></td>
+					</tr>
+  				</div>
+  				
+  				<div>
+  					<tr>
+						<td><select name="gender" id="gender" style="width:100%;" required>
+							<optgroup >
+							<option value="" disabled selected>Gender</option>
+							<option value="Male">Male</option>
+							<option value="Female">Female</option>
+							<option value="Other">Other</option>
+							</optgroup>
+						</select></td>
+				</tr>
+  				</div>
+  				</table>
+  					
+  				<div>
+					<input type="checkbox" name="checkbox" required ><span class="text">I agree with terms and conditions.</span><br/>
+					<input type="checkbox" name="checkbox"  required><span class="text">I want to recieve news and offers.<span class="text"><br/>
+						
+					
+				
+					<button>Sign up</button>
+				</div>
+			
+			</form>
+			</div>
+			
+			</div>
+	</body>
+</html>
