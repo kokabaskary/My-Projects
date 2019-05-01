@@ -1,0 +1,165 @@
+@charset "ISO-8859-1";
+
+
+html, body{
+	margin:0;
+	padding:0;
+}
+
+a{
+	text-decoration: none;
+}
+
+li{
+	list-style-type: none;
+}
+/*menu */
+.menu_container{
+		display: flex;
+		padding: 20px;
+		background-color: #1c1808;
+		font-family: cursive;
+		font-weight: 300;
+		color: white;
+}
+
+.menu_item{
+	flex: 1;
+}
+
+.more{
+	flex: 2;
+}
+
+.menu_container
+.menu_item nav ul{
+	display: flex;
+}
+
+.menu_container
+.menu_item nav ul li a{
+	color: white;
+	padding: 21px 37px;
+	border-radius: 3px;
+}
+
+.menu_container
+.menu_item nav ul li a:hover{
+	background-color: #becccf;
+	color: #1c1808
+}
+/*Title*/
+.title_container{
+		display: flex;
+		justify-content: flex-start;
+		align-content: space-around;
+		align-items: center;
+		padding: 10px;
+		}
+		
+.title_container h3{
+	padding-top: 10px;
+	flex: 7;
+}
+
+.title_container h1{
+	flex: 1;
+}		
+
+/*main content*/
+
+.main_content{
+	 display: flex;
+		justify-content: center;
+		width: 100%;
+}
+
+.main_content .sub_main{
+		width:80%;
+	 	display: flex;
+		justify-content: space-around;
+		
+		flex-wrap: wrap;
+}
+
+.main_content .img{
+	background-color: #a5c5cc;
+	width:100%;
+}
+.main_content .img img{
+	height: 100px;
+	width: 100%;
+}
+
+.main_content .main-items{
+		border: 1px solid black;
+		width: 360px;
+		height: 390px;
+		margin: 10px 0;
+		border-radius: 5px;
+		
+		}
+.main_content .main-items:hover{
+	box-shadow: 0px 0px 20px #becccf;
+}
+
+.main_content .main-items
+.img_content{
+	padding: 10px;
+}
+
+
+        .nav {/*styling the navagition bar by removing any bulletpoint*/
+            list-style: none;
+        }
+
+        .nav a {/*removing underline from the links*/
+            text-decoration: none;
+            padding: 0 1em;
+            color: white;
+            font-size: 1em;
+        }
+
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            color: white;
+            
+            border: none;
+         }
+         
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color:black;
+            min-width: 100px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+             border-radius: 10%;
+        }
+
+        
+        .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align:center;
+                border-radius: 20%;
+                }
+
+                .dropdown-content a:hover {
+                background-color: #ddd;
+                }
+
+                .dropdown:hover .dropdown-content {
+                display: block;
+                }
+
+
+                footer {/*footer flex set to appear at the end*/
+            align-self: flex-end;
+            }
