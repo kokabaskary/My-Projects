@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="ISO-8859-1">
+    <title>home dropdown</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tangerine">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="./scss/main.css"> -->
+   
+</head>
+
+<body>
+    <div class="outerContainer">
+        <!--main container-->
+        <header>
+            <!--header of the page containing nav and menu bar-->
+            <div class="heading w3-tangerine" id="top">
+             <!-- <marquee behavior="scroll" direction="left" scrollamount="5"> -->
+                        <p class="w3-jumbo banner"><strong> Cakelicious By Aelya</strong></p></marquee>  
+              
+                
+            </div>
+
+            <div><!--div for navigation bar-->
+            <nav class="flex-container menuBackground">
+
+                <ul class="nav  flex-container">
+                    <li><a href="#">Home</a></li>
+                    <li>
+                    <div class="dropdown">
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">
+                        <a href="#">Link 1</a>
+                        <a href="#">Link 2</a>
+                        <a href="#">Link 3</a>
+                    </div>
+                    </div></li>
+                                        <!-- <div class="dropdown">
+                        <button class="dropbtn" ">Flavours </button>
+                        <div class="dropdown-content">
+                            <a href="#">Fondant Cakes</a>
+                            <a href="#">Buttercream Cakes</a>
+                            <a href="#">Cake Flavor</a>
+                        </div>
+                        </div>  -->
+                    <!-- <li class="dropdown"><a href="#">Menu</a>
+                        <ul>
+                            <li class="dropdown-content" size="15" font-size: 30px;><a href="#">Our Family Members</a></li>
+                            
+                        </ul>
+                    </li> -->
+                    <li><a href="#">Gallery</a></li>
+                    <li><a href="#">Keep In Touch</a></li>
+                    <li><a href="#">Contact Aelya</a></li>
+                </ul>
+            </nav>
+            </div><!--end of div for navigation bar-->
+         </header>
+
+        <main class="main">
+            <!--main class containing two blocks that are not repeated across other pages-->
+
+            <div class="welcome"><p><img id="logo" src = "./images/logo.png"  width="75px" height="75px"/>welcome</p>
+             <p class="myStory">Home made desserts and custome made cakes for everyday or special occasions 
+                Some of my specialities that are loved by family & friends. </p>   
+            </div>
+
+            <aside>
+                <div style="text-align:center"> 
+                    <button class="vButton" onclick="playPause()"><img src ="./images/circled-play.png" width="50px"height="50px"></button>Video 
+                    <!-- <button class="vButton" onclick="makeBig()">Big</button>
+                    <button class="vButton" onclick="makeSmall()">Small</button>
+                    <button class="vButton" onclick="makeNormal()">Normal</button> -->
+                    <br><br>
+                    <video id="video1" width="50%" height="200" loop muted autoplay controls 
+                         src="./videos/" type="video/mp4">
+                        <!-- <source src="./images/videoIcon.jpg" type="video/ogg"> -->
+                        Your browser does not support HTML5 video.
+                    </video>
+                </div> 
+                 <!-- <img id="logo" src = "./images/videoIcon.jpg"  width="100px" height="100px"/>
+                 <video width="320" height="240" controls>
+                    <source src="./videos/masterpiece.mp4" type="video/mp4">
+                    <source src="movie.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                    </video> -->
+            </aside>
+
+        </main>
+
+       
+
+
+
+        <footer>
+            <!--footer of the page containing link to top of page, copyright and webmaster email-->
+            <div>
+                <a href="#top">Back To Top</a><br />
+                &copy Kokab Askary<br />
+                WebMaster:kokabaskary@gmail.com
+                <!-- Add font awesome icons -->
+                <a href="#" class="fa fa-facebook"></a>
+                <a href="#" class="fa fa-youtube"></a>
+                <a href="#" class="fa fa-instagram"></a>
+                <a href="#" class="fa fa-email"></a>
+
+            </div>
+        </footer>
+    </div><!--Main container ends here-->
+
+                <script src="./script/js.js"></script>
+
+                   
+</body>
+
+</html>
+
+<!-- <div class="dropdown">
+                        navagition bar with dropdown
+                        <button class="dropbtn">Our Story</button>
+                        <div class="dropdown-content" size="15" font-size: 10px;>
+                            <a href="#">Our Family Members</a>
+                        </div>
+                    </div>-->

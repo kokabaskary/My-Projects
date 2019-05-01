@@ -1,0 +1,305 @@
+/*The box-sizing property defines how the width and height of an element are calculated:
+ should they include padding and borders, or not.
+ border-box	The width and height properties (and min/max properties)
+  includes content, padding and border*/
+* {
+  box-sizing: border-box;
+}
+
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+.outerContainer {
+  /*attributes for main outer container*/
+  width: 100%;
+  max-width: 1200px;
+  height: 700px;
+  margin: 0 auto;
+}
+
+header, footer {
+  /*attributes for header and footer*/
+  width: 100%;
+  padding: 1em;
+  font-size: 1rem;
+  color: #F9F49A;
+}
+
+footer {
+  /*footer flex set to appear at the end*/
+  align-self: flex-end;
+  background-color: #8ACDAA;
+  border-radius: 25%;
+  border: 8px double #A67C63;
+}
+
+.fa {
+  padding: 7px;
+  font-size: 27px;
+  width: 46px;
+  text-align: center;
+  text-decoration: none;
+  margin: -15px 10px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+.fa-facebook, .fa-youtube, .fa-instagram, fa-email {
+  background: #8ACDAA;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  font-size: 100%;
+  line-height: 1.5;
+  font-family: Courier, Monaco, monospace;
+}
+
+/* #top{
+            background-color: #FBBB63;
+            border-radius: 5%;
+
+        } */
+.main {
+  /*attributes for the main container of home page. this container is not common
+  in all pages*/
+  display: flex;
+  height: 75%;
+  font-size: 2rem;
+  justify-content: space-around;
+}
+
+.welcome, aside {
+  /*two container of main */
+  padding: 10px;
+  width: 40%;
+  height: 85%;
+  color: #A67C63;
+  text-align: center;
+  justify-content: space-around;
+}
+
+.welcome {
+  background-color: #F7A9B7;
+  border-radius: 15%;
+  border: 8px double #A67C63;
+}
+
+.myStory {
+  color: #F8F499;
+  font-size: 20px;
+  text-align: justify;
+}
+
+aside {
+  background-color: #FBBB63;
+  border-radius: 15%;
+  border: 8px double #A67C63;
+}
+
+.vButton {
+  background-color: #A67C63;
+  color: #F8F499;
+}
+
+.banner {
+  background-color: #8ACDAA;
+  opacity: 0.75;
+  border-radius: 10%;
+  text-align: center;
+  border: 8px double #A67C63;
+  width: 30%;
+}
+
+.nav {
+  /*styling the navagition bar by removing any bulletpoint*/
+  list-style: none;
+  overflow: hidden;
+}
+
+.nav a {
+  /*removing underline from the links*/
+  text-decoration: none;
+  padding: 0 1em;
+  color: white;
+  font-size: 1em;
+}
+
+a:link {
+  /* unvisited link */
+  color: #F9F49A;
+  text-decoration: none;
+}
+
+a:visited {
+  /* visited link */
+  color: #F9F49A;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #F7A9B7;
+}
+
+.menuBackground {
+  /*background color of the menu*/
+  background: #8ACDAA;
+  border-radius: 25%;
+  border: 8px double #A67C63;
+}
+
+.heading {
+  /*styling the main heading of the page*/
+  color: #EB6D83;
+  font-size: 3em;
+  text-align: center;
+}
+
+.w3-tangerine {
+  /*defining a class for main title of page with an wxternal style font*/
+  font-family: "Tangerine", serif;
+}
+
+.flex-container {
+  /*container in the header for navagiaton menu*/
+  display: flex;
+  width: 100%;
+  font-size: 1.5rem;
+  justify-content: space-around;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: #8ACDAA;
+  color: inherit;
+  font-size: 1.5rem;
+  border: none;
+  font-family: Courier, Monaco, monospace;
+}
+
+.dropbtn {
+  /*navagiton bar dropdown button menu */
+  background-color: #8ACDAA;
+  color: #F8F499;
+  font-size: 1.5rem;
+  border: none;
+  font-family: Courier, Monaco, monospace;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #8ACDAA;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: #F8F499;
+  text-decoration: none;
+  display: block;
+  padding: 12px 16px;
+  text-align: left;
+  z-index: 1;
+  font-family: Courier, Monaco, monospace;
+}
+
+.dropdown-content a:hover {
+  background-color: #F8F499;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown a:hover .dropbtn {
+  background-color: #F7A9B7;
+}
+
+.form {
+  /*form container for login, registration and contactus page*/
+  padding: 1em;
+  width: 100%;
+  height: 85%;
+  padding: 1em;
+  padding-left: 20px;
+  border-left: 100px;
+  text-align: justify;
+}
+
+.mainContact {
+  /*main container of contact form contact us page and login page */
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-around;
+  color: white;
+  text-align: center;
+}
+
+.text {
+  /*Main text of contact form*/
+  color: red;
+  text-align: center;
+  margin-top: 2%;
+}
+
+.mainForm {
+  /*form attributes*/
+  justify-content: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  line-height: 1em;
+  height: 450px;
+  margin-left: 6px;
+  padding: 25px;
+  color: #A67C63;
+  font-size: 1rem;
+  background-color: #F7A9B7;
+  border-radius: 15%;
+  border: 8px double #A67C63;
+  text-align: center;
+}
+
+.inputText {
+  /*styling of the input text contact page and student login page*/
+  font-size: 1.25rem;
+  text-align: initial;
+  width: 100%;
+  background-color: #EB6981;
+  border: none;
+  outline: none;
+  border-radius: 3px;
+  padding: 2px;
+  opacity: 0.5;
+}
+
+.mainForm .inputText #name:focus:invalid {
+  border: solid 3px #b7334d;
+}
+
+#backcolor {
+  /*styling of send button*/
+  width: 30%;
+  height: 23px;
+  background-color: #F1889B;
+  color: #A67C63;
+}
+
+.error {
+  color: red;
+  margin-left: 5px;
+}
+
+label.error {
+  display: inline;
+}
+
+/*# sourceMappingURL=main.css.map */
