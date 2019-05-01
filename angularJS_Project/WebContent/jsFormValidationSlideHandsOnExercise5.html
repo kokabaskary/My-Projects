@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <meta charset="ISO-8859-1">
+        <title>Angular JS Form Validation</title>
+        <script src="js/angular.min.js"></script>
+            
+        </head>
+       
+
+            <body ng-app="myApp" ng-controller="studentController">
+                <h1>Student Form</h1>
+                <form name="form"  ng-submit="submitStudentForm()" >
+                <table>
+                    <tr>
+                        <td>Enter Id Number:</td>
+                        <td><input type="number" name="id" ng-model="newStudent.id" required>
+                           
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enter Name</td>
+                        <td><input type="text" name="name" ng-model="newStudent.name" required>
+                             
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Enter Email</td>
+                        <td><input type="email" name="email" ng-model="newStudent.email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        <button>Submit</button>
+                    </td>
+                    </tr>
+                    
+                 </table>
+                </form>
+                <button ng-click="resetForm()">Reset</button>
+                <span ng-show="form.id.$error.required || form.name.$error.required ">
+                                    ID/Name is Required.</span>
+                <span ng-show="form.email.$invalid">Invalid Email.</span>
+            <script>
+                var app = angular.module("myApp", []);
+
+                app.controller("studentController",function($scope,$window){
+                    $scope.origionalStudent={
+                        id:1,
+                        name:'James Gosling',
+                        email:'jgosling@java.org'
+                    }
+                    $scope.newStudent={
+                        id:$scope.origionalStudent.id,
+                        name:$scope.origionalStudent.name,
+                        email:$scope.origionalStudent.email
+                    }
+
+                    $scope.submitStudentForm= function(){
+                        alert( 'id: ' + $scope.newStudent.id+
+                          '\nname:'+$scope.newStudent.name+
+                          '\nemail: ' +$scope.newStudent.email)
+                            }
+
+                    $scope.resetForm=function(){
+                        $scope.newStudent.id= $scope.origionalStudent.id;
+                        $scope.newStudent.name= $scope.origionalStudent.name;
+                        $scope.newStudent.email= $scope.origionalStudent.email;
+
+                    }
+
+                   
+
+                });
+
+                     
+
+
+            //     $scope.id= "1"
+            //     // {id:1,name:'James Gosling', email:'jgosling@java.org'}
+            //     $scope.DisplayMessage = function(value){
+            //         $window.alert(value)
+            //     }
+            // });
+                // app.controller('myCtrl', function($scope){
+                //     $scope.user={
+                //         name:{
+                //             required:true,
+                //             minlength: 5,
+                //             maxlength: 25
+                //         }
+                //     }
+                // });
+            </script>
+        </body>
+</html>

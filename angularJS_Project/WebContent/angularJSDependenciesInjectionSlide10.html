@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Injecting Dependencies Factory</title>
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+    <!-- <body ng-app="ngApp"> -->
+
+    <!-- <div ng-controller="ctrl">
+        Student Name:{{studentName}}<br>
+        Current Site:{{site}}
+
+    </div> -->
+    <!-- for slide 16 -->
+    <!-- <body ng-app="myApp">
+    <div ng-controller="customersCtrl">
+        My Current URL:{{myUrl}}
+    </div> -->
+
+     <!-- for slide 17 -->
+    <body >
+        <h3>Anjular JS Service</h3>
+    <div ng-app="mainApp" ng-controller="DemoController">
+        <p> Result: {{result}}</p>
+    </div>
+
+
+
+    <script>
+
+        // var ngApp = angular.module("ngApp", []);
+
+        // ngApp.factory("greetF", function () {
+        //     var obj = {};
+        //     obj.sayHello = function (name) {
+        //         return "Hello, " + name;
+        //     }
+        //     return obj;
+        // });
+
+        // ngApp.controller('ctrl', function ($scope, greetF) {
+        //     $scope.greetings = greetF.sayHello("Young");
+        // });
+        // *********************Slide 11 Services*************************
+
+        // var ngApp = angular.module("ngApp", []);
+
+        // ngApp.service("greetS", function () {
+        //     this.sayHello = function (name) {
+        //         return "Hello, " + name;
+        //     }
+        // });
+
+        // ngApp.controller('ctrl', function ($scope, greetS) {
+        //     $scope.greetings = greetS.sayHello("Young");
+        // });
+
+
+
+        //    **************Slide 12 Provider******************
+        // var ngApp = angular.module("ngApp", []);
+
+        // ngApp.provider("student", function () {
+        //     this.site = ''
+
+        //     this.$get = function () {
+        //         var thisProv = this;
+        //         return {
+        //             name: function () {
+        //                 return "Young";
+        //             },
+        //             site: thisProv.site
+        //         }
+        //     }
+        // });
+        // ngApp.controller('ctrl', function ($scope, student) {
+        //     $scope.studentName = student.name();
+        //     $scope.site = student.site;
+        // });
+
+        // ngApp.config(function (studentProvider) {
+        //     studentProvider.site = "New York";
+        // });
+
+        // ***********************Slide 16*****************
+
+        // var app = angular.module('myApp', []);
+        // app.controller('customersCtrl', function ($scope, $location) {
+        //     $scope.myUrl = $location.absUrl();
+        // });
+    // *************************Slide17********************
+
+        var mainApp = angular.module("mainApp", []);
+
+    mainApp.service('AdditionService', function(){
+
+        this.ADDITION = function(a,b) {
+
+            return a+b;
+
+        }
+
+    });
+
+    mainApp.controller('DemoController', function($scope, AdditionService) {
+
+            $scope.result = AdditionService.ADDITION(5,6);
+
+    });
+
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BootStrap Home Page</title>
+    <script src="js/angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body class="bg-light" ng-app="myApp" ng-controller="studentController" ng-cloak>
+    <!--The .container-fluid class provides a full width container, spanning the entire width of the viewport.-->
+    <div class="container">
+        <div class="bg-warning">
+
+            <h1 class="text-center">AngularJs $http Get, Put, Post, Delete Functions.........</h1>
+        </div>
+    </div>
+    <!--end of title-->
+    <!--Toggable tab-->
+    <div class="container">
+        
+        <ul class="nav nav-tabs">
+            <li class="active"><a href="#form" data-toggle="tab" id="form_tab">User Form</a></li>
+            
+            <li><a href="#list" data-toggle="tab" id="list_tab" >User List</a></li>
+            
+        </ul>
+        <!-- </nav> -->
+
+
+        <div class="tab-content">
+            <div id="form" href="#form" class="tab-pane fade in active">
+                <form name="userForm" ng-submit="createUser()">
+                    <h2 class="text-warning">Create User</h2>
+                    <div class="form-group text-info">
+                        <label for="usr">Name:</label>
+                        <input type="text" class="form-control bg-info text-warning" id="usr" name="username" ng-model="user.name"
+                            placeholder="Maria.." required />
+                    </div>
+                    <div class="form-group text-info">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control text-warning bg-info" id="email" name="email" ng-model="user.email"
+                            placeholder="maria@perschols.org" required />
+                    </div>
+                     <div>
+                        <input onclick="$('#list_tab').trigger('click')" type="submit" class="btn btn-primary btn btn-info text-warning" value="submit" ng-show="submit"
+                            ng-disabled="userForm.$invalid" ng-click="changeTab()"/>
+                            <input onclick="$('#list_tab').trigger('click')" type="button" class="btn btn-primary btn btn-info text-warning" value="update"
+                                ng-click="updateUser()" ng-show="update"/>
+                            <input type="button" class="btn btn-primary btn btn-info text-warning" value="cancel"
+                                ng-click="cancelUpdate()" ng-show="cancel"/>
+                    </div> 
+                    <!-- <button type="submit" class="btn btn-primary btn btn-info text-warning" >Submit</button> -->
+                </form>
+            </div>
+
+            <div id="list" href="#list" class=" table-responsive tab-pane fade">
+                <h2 class="text-warning">Participants List</h2>
+                <table class="table table-warning table-hover table-bordered">
+                    <thead class="thead-dark">
+                        <tr class="text-info">
+                            <th scope="col">Name</th>
+                            <th scope="col">Email</th>
+                            <th>Action</th>
+                            <th>Commands</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-info" ng-repeat="user in users">
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td><button onclick="$('#form_tab').trigger('click')"   type="submit" ng-click="editUser(user)" class="btn btn-info btn-sm">Edit</button></a></td>
+                            <td><button type="button" ng-click="deleteUser(user)" class="btn btn-warning">Delete</button></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!--end of nav-->
+
+
+
+
+    <script src="./js/bootStrapProjectScript.js"></script>
+
+</body>
+
+</html>

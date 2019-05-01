@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="ISO-8859-1">
+    <title>Exercise 1</title>
+    <script src="js/angular.min.js"></script>
+
+    </head>
+    <!-- ****************************Slide 45 HandsOn Exercise 1 with expression********************* 
+         <body ng-app ng-init="count=0">
+             <h1 ng-mousemove="count= count+1"> Mouse Over Me !!! </h1>
+
+             <h2> 
+                 {{count}}
+             </h2> -->
+
+  <!-- ****************************Slide 45 HandsOn Exercise 1 with function********************* 
+         <body ng-app="myNgApp" ng-controller="myController">
+            
+             <h1 ng-mousemove="inc()"> Mouse Over Me !!! </h1>
+             <h2> 
+                 {{count}}
+             </h2>
+         
+             <script>
+             
+             var ngApp = angular.module('myNgApp', []);
+
+             ngApp.controller('myController', function($scope){
+                 $scope.count= 0;
+                 $scope.inc= function(){
+                     $scope.count= count*100
+                 }
+             })
+             
+             </script> -->
+
+              <!-- ****************************Slide 45 HandsOn Exercise 1 with function********************* --> 
+         <!-- <body ng-app="myNgApp">
+             <div ng-controller="myController">
+              <h1 ng-mousemove="inc()"> INCREASE BY:{{increase}} </h1>
+             <input type="number" ng-model="increase">
+             
+             <h2> 
+                 {{count}}
+             </h2>
+         </div>
+             <script>
+             
+             var ngApp = angular.module('myNgApp', []);
+
+             ngApp.controller('myController', function($scope){
+                 $scope.increase = 1;
+                 $scope.count = 1;
+                 $scope.inc= function(){
+                     $scope.count = $scope.count * $scope.increase
+                 }
+             })
+             
+             </script> -->
+
+     <!-- ****************************Slide 45 HandsOn Exercise 1 with expression*********************  -->
+         <!-- <body ng-app ng-init="count=0; step=1">
+             <h1 ng-mousemove="count= count+step"> Increase:{{step}} </h1>
+            <input type="number" ng-model="step">
+             <h2> 
+                 {{count}}
+             </h2>  -->
+
+
+               <!-- ****************************Slide 45 HandsOn Exercise 1 with expression*********************  -->
+         <body ng-app ng-init="count=0; step=1">
+            
+             <h1  ng-mousemove="count=count+step"> Increase by :{{step}} </h1>
+             <input type="number" ng-model="step">
+             
+             <h2> 
+                 {{count}}
+             </h2>
+             <h2 ng-if="count<0" style="color:red;">Counter is Negative</h2>
+             <h2 ng-if="count>=0">Counter is Positive</h2>
+
+         
+           
+         </body>
+</html>
+
+   
+     
+
+     

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BootStrap Home Page</title>
+    <script src="js/angular.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script> -->
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+</head>
+
+<body class="bg-light" ng-app="myApp" ng-controller="studentController" ng-cloak>
+    <!--The .container-fluid class provides a full width container, spanning the entire width of the viewport.-->
+    <div class="container">
+        <div class="jumbotron">
+
+            <h1 class="text-center">AngularJs $http Get, Put, Post, Delete Functions.........</h1>
+        </div>
+    </div>
+    <!--end of title-->
+    <!--Toggable tab-->
+    <div class="container">
+        
+        <ul class="nav nav-tabs">
+            <li class="active"><a data-toggle="tab" href="#form">User Form</a></li>
+
+            <li><a data-toggle="tab" href="#list">User List</a></li>
+        </ul>
+        <!-- </nav> -->
+
+
+        <div class="tab-content">
+            <div id="form" class="tab-pane fade in active">
+                <form name="userForm" ng-submit="createUser()">
+                    <h2 class="text-warning">Create User</h2>
+                    <div class="form-group text-info">
+                        <label for="usr">Name:</label>
+                        <input type="text" class="form-control bg-info text-warning" id="usr" name="username" ng-model="user.name"
+                            placeholder="Maria.." required />
+                    </div>
+                    <div class="form-group text-info">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control text-warning bg-info" id="email" name="email" ng-model="user.email"
+                            placeholder="maria@perschols.org" required />
+                    </div>
+                    <!-- <div>
+                        <input type="submit" class="btn btn-primary btn btn-info text-warning" value="submit" ng-show="submit"
+                            ng-disabled="userForm.$invalid" />
+                            <input type="button" class="btn btn-primary btn btn-info text-warning" value="update"
+                                ng-click="updateUser()" ng-show="update"/>
+                            <input type="button" class="btn btn-primary btn btn-info text-warning" value="cancel"
+                                ng-click="cancelUpdate()" ng-show="cancel"/>
+                    </div> -->
+                    <!-- <button type="submit" class="btn btn-primary btn btn-info text-warning" >Submit</button> -->
+                </form>
+            </div>
+
+            <div id="list" class="tab-pane fade">
+                <h2 class="text-warning">Participants List</h2>
+                <table class="table table-warning table-hover">
+                    <thead>
+                        <tr class="text-info">
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Action</th>
+                            <th>Commands</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="text-info" ng-repeat="user in users">
+                            <td>{{user.name}}</td>
+                            <td>{{user.email}}</td>
+                            <td><button type="submit" ng-click="editUser(user)" class="btn btn-info text-warning"  href="#form">Edit</button></td>
+                            <td><button type="button" ng-click="deleteUser(user)" class="btn btn-info text-warning">Delete</button></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </div>
+    <!--end of nav-->
+
+
+    
+
+   
+    <!--End of .container-fluid-->
+    <!-- <script>
+
+        var myApp = angular.module('myApp', []);
+         myApp.controller('studentController', function ($scope, $http) {
+
+            // Button Settings
+            $scope.submit = true;
+            $scope.update = false;
+            $scope.cancel = false;
+          
+
+            
+            // Getting user list
+            //$http GET function
+            $http.get('https://jsonplaceholder.typicode.com/users')
+            .then(function successCallback(response) {
+                    $scope.users = response.data;
+                }, function errorCallback(response) {
+                    $(document).ready(function(){
+                    $("#myBtn").click(function(){
+                        $("#myModal").modal();
+                    });
+                    });
+                                        alert("Error. Try Again!");
+                });
+
+                //Create New User
+            $scope.createUser = function () {
+                //$http POST function
+                $http.post('https://jsonplaceholder.typicode.com/users', $scope.user)
+                .then(function successCallback(response) {
+                        $scope.users.push(response.data);
+                         alert("User has created Successfully")
+                    }, function errorCallback(response) {
+                        alert("Error. while created user Try Again!");
+                    });
+                 };
+
+                //Update User
+            $scope.updateUser = function () {
+                //$http PUT function
+                $http.put('https://jsonplaceholder.typicode.com/users/' + $scope.user.id)
+                .then(function successCallback(response) {
+                         alert("User has updated Successfully")
+                    }, function errorCallback(response) {
+                        alert("Error. while updating user Try Again!");
+                    });
+            };
+             //Delete User
+            $scope.deleteUser = function(user) {
+                //$http DELETE function
+                $http.delete('https://jsonplaceholder.typicode.com/users/'+ $scope.user.id)
+                .then(function successCallback(response) {
+                         alert("User has deleted Successfully");
+                         var index = $scope.users.indexOf(user);
+                         $scope.users.splice(index, 1);
+                    }, function errorCallback(response) {
+                        alert("Error. while deleting user Try Again!");
+                    });
+                 };
+
+            // Set $scope on Edit button click
+            $scope.editUser = function(user){
+                $scope.user = user;
+                $scope.submit = false;
+                $scope.update = true;
+                $scope.cancel = true;
+            };
+
+            // Cancel Update
+            $scope.cancelUpdate = function(){
+                $scope.user = null;
+                $scope.submit = true;
+                $scope.update = false;
+                $scope.cancel = false;
+            };
+
+        });
+    </script> -->
+
+
+
+    <script src="./js/bootStrapProjectScript.js"></script>
+
+</body>
+
+</html>

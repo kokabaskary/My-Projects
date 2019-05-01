@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="ISO-8859-1">
+    <title>ng-app Directive</title>
+    <script src="js/angular.min.js"></script>
+    
+    </head>
+   
+
+         <!-- ****************************Modules slide 35********************* -->
+        <!-- <body ng-app="myNgApp">
+            <div ng-controller="myController">
+               
+            
+               First Name: {{student.firstName}}<br>
+               Last Name: {{student.lastName}}
+            </div>
+
+        <script>
+            var ngApp = angular.module('myNgApp', []);
+
+            ngApp.controller('myController', function($scope){
+                $scope.student ={firstName:'Albert', lastName:'Einstein'};
+                                     
+            }); -->
+
+            <!-- ****************************Modules slide 35 in Array********************* -->
+        <!-- <body ng-app="myNgApp">
+            <div ng-controller="myController">
+                <div ng-repeat= "s in students">
+                    First Name: {{s.firstName}}<br>
+                    Last Name: {{s.lastName}}<br><hr>
+                 </div>
+            
+
+            </div>
+
+        <script>
+            var ngApp = angular.module('myNgApp', []);
+
+            ngApp.controller('myController', function($scope){
+                $scope.students =[{firstName:'Albert', lastName:'Einstein'},
+                                {firstName:'Kokab',lastName:'Askary'}]; 
+            });
+
+            
+        </script> -->
+
+               <!-- ****************************Modules slide 36 Nested Controller*********************
+        <body ng-app="myNgApp">
+            <div ng-controller="parentController">
+                Message: {{message1}}
+                <div ng-controller = "childController">
+                       Parent Message: {{message1}} <br>
+                       Child Message: {{message2}}
+                 </div>
+                  Child Message: {{message2}}
+            </div>
+
+        <script>
+            var ngApp = angular.module('myNgApp', []);
+
+            ngApp.controller('parentController', function($scope){
+                $scope.message1 = "This is parentController"; 
+            });
+
+            ngApp.controller('childController', function($scope){
+                $scope.message2 = "This is childController"; 
+            });
+
+            
+        </script> -->
+
+ <!-- ****************************Modules slide 37 Controller Method*********************
+        <body>
+             <div ng-app="myNgApp" ng-controller="personCtrl">
+                First Name: <input type="text" ng-model="firstName"><br>
+                Last Name: <input type="text" ng-model="lastName">
+                <br>
+                Full Name: {{fullName()}}
+            </div>
+
+        <script>
+            var ngApp = angular.module('myNgApp', []);
+
+            ngApp.controller('personCtrl', function($scope){
+                $scope.firstName = "Kokab"; 
+                $scope.lastName = "Askary";
+                $scope.fullName = function(){
+                    return $scope.firstName + " " + $scope.lastName;
+                };
+            });     
+        </script> -->
+
+        <!-- ****************************Modules slide 37 Controller Method Modified*********************
+        <body>
+             <div ng-app="myNgApp" ng-controller="personCtrl">
+                First Name: <input type="text" ng-model="firstName"><br>
+                Last Name: <input type="text" ng-model="lastName">
+                <br>
+                Full Name: {{fullName()}}
+            </div>
+
+        <script>
+            var ngApp = angular.module('myNgApp', []);
+
+            ngApp.controller('personCtrl', function($scope){
+                $scope.firstName = "Kokab"; 
+                $scope.lastName = "Askary";
+                $scope.fullName = function(){
+                    return $scope.firstName + " " + $scope.lastName[0];
+                    return $scope.firstName + " " + $scope.lastName.subString(0,1);
+
+                };
+            });     
+        </script> -->
+
+         <!-- ****************************Modules slide 39 scope*********************
+        <body ng-app="myNgApp">
+             <div  ng-controller="myController">
+                 Message: <br>
+                 {{message}}<br>
+                 <span ng-bind="message"></span><br>
+                 <input type="text" ng-model="message">
+                
+                <br>
+                
+            </div>
+
+        <script>
+            var ngApp = angular.module('myNgApp', []);
+
+            ngApp.controller('myController', function($scope){
+                $scope.message = " Hello Kokab"; 
+               
+            });
+                 
+        </script> -->
+
+          ****************************Modules slide 40 scope $rootScope********************* -->
+         <body ng-app="myNgApp">
+             <div  ng-controller="parentController">
+                 Controller Name: {{controllerName}}<br>
+                 Message: {{message}}<br>
+                 <div style="margin: 10px 0 10px 20px;" ng-controller="childController">
+                    Controller Name: {{controllerName}}<br>
+                        Message:{{message}} <br>
+                 </div>
+             </div>
+             <div  ng-controller="siblingController">
+                 Controller Name: {{controllerName}}<br>
+                 Message: {{message}}<br>
+            </div>
+
+
+
+        <script>
+            var ngApp = angular.module('myNgApp', []);
+
+            // ngApp.controller('parentController', function($scope, $rootScope){
+            //     $scope.controllerName = "parentController";
+            //     $rootScope.message = "Hello Kokab"; 
+            //     });
+
+            // ngApp.controller('childController', function($scope){
+            //     $scope.controllerName = "childController";
+            //       });
+
+            //  ngApp.controller('siblingController', function($scope){
+            //      });
+
+
+            //  ngApp.controller('parentController', function($scope){
+            //     $scope.controllerName = "parentController";
+               
+            //     });
+
+            // ngApp.controller('childController', function($scope, $rootScope){
+            //     $scope.controllerName = "childController";
+            //     $rootScope.message = "Hello Kokab";
+            //       });
+
+            //  ngApp.controller('siblingController', function($scope){
+            //                  });
+                 
+        </script>
+
+
+       
+
+    </body>
+</html>
+
+   
+     
+
+     

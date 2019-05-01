@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <meta charset="ISO-8859-1">
+        <title>Angular JS Form Validation</title>
+        <script src="js/angular.min.js"></script>
+            
+        </head>
+        <!-- <body ng-app>
+            <p>Try writing an E-mail address in the input field:</p>
+
+            <form name="myForm">
+                Email:
+                <input type="email" name="myAddress" ng-model="myEmail">
+                <span ng-show="myForm.myAddress.$error.email">
+                    Not a valid email address
+                </span>
+            </form> -->
+            
+            <!-- FOrm validation Slide 62 -->
+
+            <!-- <body>
+             <form ng-app name="myForm" ng-init="myText = 'info@perscholas.org'">
+                Email:
+                <input type="email" name="myAddress" ng-model="myText" required>
+                <p>Edit the E-mail address and try to change status.</p>
+                <p>Name:
+                   <input name="myName" ng-model="myName" required> 
+                   <span ng-show="myForm.myName.$touched && myForm.myName.$invalid">
+                       The Name is Required.
+                   </span>
+                </p>
+                <h1>Status</h1>
+                <p>Valid: {{myForm.myAddress.$valid}}
+                    (if true, the value meets all criteria.)
+                </p>
+                <p>Dirty: {{myForm.myAddress.$dirty}}
+                    (if true, the value has been changed.)
+                </p>
+                <p>Touched: {{myForm.myAddress.$touched}}
+                    (if true, the field has been in focus.)
+                </p>
+                
+            </form> -->
+            <!-- ************Form Validation Slide 66***************** -->
+
+            <body ng-app="myApp" ng-controller="myCtrl">
+                <div>
+                    <h3>Use of ng-minlength and ng-maxlength and ng-required in AngularJS</h3>
+                </div>
+             <form  name="form">
+                User Name*:
+                <input type="text" name="name" ng-model="name" ng-minlength='{{user.name.minlength}}'
+                        ng-maxlength='{{user.name.maxlength}}' ng-required='user.name.required'>
+                
+                   <span ng-show="form.name.$dirty && form.name.$error.required">
+                       The Name is Required.
+                   </span>
+                   <span ng-show="form.name.$error.minlength" style="color:red ">
+                       Input is too short!!!.
+                   </span>
+                   <span ng-show="form.name.$error.maxlength">
+                       Input is too long!!!.
+                   </span>
+                
+                
+            </form>
+
+            <script>
+                var app = angular.module("myApp", []);
+                app.controller('myCtrl', function($scope){
+                    $scope.user={
+                        name:{
+                            required:true,
+                            minlength: 5,
+                            maxlength: 25
+                        }
+                    }
+                });
+            </script>
+        </body>
+</html>

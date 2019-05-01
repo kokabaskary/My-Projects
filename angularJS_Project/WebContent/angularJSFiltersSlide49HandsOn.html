@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="ISO-8859-1">
+    <title>ng-app Directive</title>
+    <script src="js/angular.min.js"></script>
+
+    </head>
+   
+
+        
+
+            <!-- ****************************Modules slide 48 Filters Numbers********************* 
+          <body> 
+
+            <div ng-app="myApp" ng-controller="nCtrl">
+                <h1>{{weight | number: 4}} Pounds</h1>
+                
+            </div>
+            <script>
+                var app = angular.module('myApp', []);
+                 app.controller('nCtrl', function($scope){
+                     $scope.weight = 1000;
+                 })
+                
+            
+            </script>  -->
+
+              <!-- ****************************Modules slide 49 Filters Currency********************* 
+         <body ng-app="myApp">
+
+            <div  ng-controller="myController">
+                Default Currency:{{person.salary | currency}}<br>
+                Custom Currency Identifier: {{person.salary | currency:'$'}}<br>
+                No Fraction:{{person.salary | currency:'$':0}}<br>
+                Fraction 2: <span ng-bind="person.salary | currency:'$':2"></span><br>
+                
+                
+            </div>
+            <script>
+                var myApp = angular.module('myApp', []);
+                 myApp.controller('myController', function($scope){
+                     $scope.person = {firstName:'James', lastNmae: 'Bond', salary:100000};
+                 })
+                
+            
+            </script> -->
+
+ <!-- ****************************Modules slide 49 Filters Date********************* 
+         <body >
+
+            <div ng-app="myApp" ng-controller="dateCtrl">
+                <p>Date ={{today | date}}</p>
+                
+            </div>
+            <script>
+                var app = angular.module('myApp', []);
+                 app.controller('dateCtrl', function($scope){
+                     $scope.today = new Date();
+                 })
+                
+            
+            </script>
+
+            <p>The Date filter formats a date object to a readable format.</p> -->
+          
+             <!-- ****************************Modules slide 49 Filters lowercase********************* 
+         <body ng-app="myApp" ng-controller="personCtrl" >
+
+            <div >
+                <p>The first name is {{firstName | uppercase}}</p>
+                <p>The last name is {{lastName | lowercase}}</p>
+                
+            </div>
+            <script>
+                 angular.module('myApp', []).controller('personCtrl', function($scope){
+                     $scope.firstName = "james",
+                     $scope.lastName="BOND";
+                 })
+                
+            
+            </script> -->
+
+
+   <!-- ****************************Modules slide 49 Filters filter********************* 
+         <body ng-app="myApp"  >
+
+            <div ng-controller="myController">
+                Enter Name to search:<input type="text" ng-model="searchCriteria"><br>
+                Result: {{myArr| filter:searchCriteria}}
+               
+            </div>
+            <script>
+                 var myApp = angular.module('myApp', []);
+                 myApp.controller('myController', function($scope){
+                     $scope.myArr = ['Steve','Anna','James','Rob','Maria','lucy'] 
+                   
+                 });
+                
+            
+            </script> -->
+
+               <!-- ****************************Modules slide 49 Filters filter*********************  -->
+         <body ng-app="myApp"  >
+
+
+            <div ng-controller="myController">
+                <table>
+                    <tr>
+                        <td>
+                        Enter First Name:</td>
+                        <td>
+                        <input type="text" ng-model="fName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Enter Last Name:</td>
+                        <td>
+                        <input type="text" ng-model="lName">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Enter Fees:</td>
+                        <td>
+                        <input type="number" ng-model="fees">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Enter Subject:</td>
+                        <td>
+                        <input type="text" ng-model="subject">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Name in Upper Case:</td>
+                        <td>
+                        {{fName + " "+ lName | uppercase}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Name in Lower Case:</td>
+                        <td>
+                        {{fName + " "+ lName | lowercase}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Fees:</td>
+                        <td>
+                        {{fees | currency:'$'}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                        Sibject:</td>
+                        <td>
+                            <ul>
+                                <li ng-repeat="sub in ((subjects | filter:{name:subject}) | orderBy:+marks)">
+                                    {{sub.name + ',marks'+ sub.marks}}
+                                </li>
+                            </ul>
+                        </td>
+                    </tr>
+                </table>
+               
+                
+            </div>
+            
+           
+
+            <script>
+
+                 var myApp = angular.module('myApp', []);
+
+                 myApp.controller('myController', function($scope){
+                     $scope.subjects = [{name:'Maths',marks:'65'},
+                                        {name:'Physics',marks:'70'},
+                                        {name:'Chemistry',marks:'80'}]
+                                       
+                        // $scope.SortOrder ='+mark'; 
+                   
+                 });
+                
+            
+            </script>
+         </body>
+</html>
+
+   
+     
+
+     

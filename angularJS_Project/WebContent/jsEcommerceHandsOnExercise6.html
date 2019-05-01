@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Angular JS Form Validation</title>
+    <script src="js/angular.min.js"></script>
+
+</head>
+
+
+<body ng-app="myApp" ng-controller="ecommController">
+    <h1>Welcome to my Shopping page</h1>
+    <!-- <form name="form"  ng-submit="submitStudentForm()" > -->
+    <table>
+        <thead>
+            <tr>
+                <td> ID: </td>
+                <td> Product Name : </td>
+                <td> Image :</td>
+                <td> Price :</td>
+                <td> Quantity :</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="list in users ">
+                <td>{{list.id}}</td>
+                <td>{{list.product | uppercase}}</td>
+                <td>{{list.image}}</td>
+                <td>{{list.price | currency:'$'}}</td>
+                <td ng-controller="EventController">
+                    {{count}}
+                </td>
+
+                <td>
+                    <button ng-click="$emit('MyEvent')">+</button>
+                    <button ng-click="$emit('MyEvent')">-</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+
+
+
+        var app = angular.module("myApp", []);
+
+        app.controller("ecommController", function ($scope) {
+            $scope.users = [
+                { id: 1, product: 'pants', image: 'jgosling@java.org', price: '50' },
+                { id: 2, product: 'shirts', image: 'jgosling@java.org', price: '20' },
+                { id: 3, product: 'scarfs', image: 'jgosling@java.org', price: '10' },
+                { id: 4, product: 'shoes', image: 'jgosling@java.org', price: '30' }]
+
+        });
+        app.controller('EventController', ['$scope', function ($scope) {
+            $scope.count = 0;
+            $scope.$on('MyEvent', function () {
+                $scope.count++;
+            });
+        }]);
+
+
+
+
+
+            //     $scope.id= "1"
+            //     // {id:1,name:'James Gosling', email:'jgosling@java.org'}
+            //     $scope.DisplayMessage = function(value){
+            //         $window.alert(value)
+            //     }
+            // });
+                // app.controller('myCtrl', function($scope){
+                //     $scope.user={
+                //         name:{
+                //             required:true,
+                //             minlength: 5,
+                //             maxlength: 25
+                //         }
+                //     }
+                // });
+    </script>
+</body>
+
+</html>

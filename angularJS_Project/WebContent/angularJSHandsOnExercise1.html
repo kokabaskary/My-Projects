@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="ISO-8859-1">
+    <title>ng-app Directive</title>
+    <script src="js/angular.min.js"></script>
+<style>
+    /* <!-- For slide 44 --> */
+
+    .redDiv{
+        width:100px;
+        height: 100px;
+        background-color: red;
+        padding: 2px 2px 2px 2px
+        }
+
+        .yellowDiv{
+        width:100px;
+        height: 100px;
+        background-color:yellow;
+        padding: 2px 2px 2px 2px
+        }
+    </style>
+    </head>
+   
+
+        
+
+          <!-- ****************************Modules slide 43 Events********************* 
+         <body ng-app="myApp">
+             <div  ng-controller="myController">
+                 Enter Password: <input type="password" ng-model="password"><br><br>
+
+                 <button ng-click="DisplayMessage(password)">Show Password</button>
+                 
+             </div>
+             
+        <script>
+            var myApp = angular.module('myApp', []);
+
+            myApp.controller("myController", function($scope, $window){
+
+                $scope.DisplayMessage = function(value){
+                    $window.alert(value)
+                }
+            });
+          </script> -->
+
+             <!-- ****************************Modules slide 43 Events with default value in box********************* 
+         <body ng-app="myApp">
+             <div  ng-controller="myController">
+                 Enter Password: <input type="password" ng-model="password"><br><br>
+
+                 <button ng-click="DisplayMessage(password)">Show Password</button>
+                 
+             </div>
+             
+        <script>
+            var myApp = angular.module('myApp', []);
+
+            myApp.controller("myController", function($scope, $window){
+
+                $scope.password="I Love Angular JS"
+                $scope.DisplayMessage = function(value){
+                    $window.alert(value)
+                }
+            });
+          </script> -->
+
+    ****************************Modules slide 43 Events with default value in box********************* 
+         <body ng-app="myApp">
+             <div  ng-controller="myController">
+                 Enter Password: <input type="password" ng-model="password"><br><br>
+
+                 <button ng-click="DisplayMessage(password)">Show Password</button>
+                 
+             </div>
+             
+        <script>
+            var myApp = angular.module('myApp', []);
+
+            myApp.controller("myController", function($scope, $window){
+
+                $scope.password="I Love Angular JS"
+                $scope.DisplayMessage = function(value){
+                    $window.alert(value)
+                }
+            });
+          </script>
+          
+      <!-- ****************************Modules slide 44 MouseEvents********************* --> 
+         <!-- <body ng-app>
+             <div  ng-class="{redDiv: enter, yellowDiv: leave}"
+                                ng-mouseenter="enter=true; leave=false;"
+                                ng-mouseleave="leave=true; enter=false;">
+                    Mouse <span ng-show="enter">Enter</span>
+                            <span ng-show="leave">Leave</span>
+                 
+             </div> -->
+         </body>
+</html>
+
+   
+     
+
+     

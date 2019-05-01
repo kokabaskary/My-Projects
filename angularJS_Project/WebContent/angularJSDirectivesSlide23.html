@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="ISO-8859-1">
+    <title>ng-app Directive</title>
+    <script src="js/angular.min.js"></script>
+    <style>
+        div{
+            border: 1px solid green;
+            width: 100%;
+            height: 50px;
+            display:block;
+            margin-bottom: center;
+            background-color: yellow;
+        }
+    </style>
+    </head>
+    <body ng-app="" ng-init="students=['Max','Anna','Maria']" >
+        <ol>
+            <li ng-repeat="sName in students">
+                <span ng-bind="sName"></span>
+                <!-- can use both syntaxes -->
+                {{sName}}
+            </li>
+        </ol>
+        <div ng-repeat="sName in students">
+            <span ng-bind="sName"></span>
+            <!-- {{sName}} -->
+        </div>
+       
+
+            
+
+    </body>
+</html>

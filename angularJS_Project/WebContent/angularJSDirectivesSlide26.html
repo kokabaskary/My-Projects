@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="ISO-8859-1">
+    <title>ng-app Directive</title>
+    <script src="js/angular.min.js"></script>
+    
+    </head>
+    <!-- <body> -->
+        <!-- <div ng-app="myApp" ng-controller="myCtrl">
+            How much is the 2019
+            {{carMake + " " + carModel}} in today's market?
+
+        </div>
+        <script>
+            var app = angular.module("myApp", []);
+
+            app.controller("myCtrl", function($scope){
+                $scope.carMake = "Audi";
+                $scope.carModel = "Q8";
+
+            });
+        </script> -->
+        
+<!-- ****************************Modules slide 29********************* -->
+
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+            How much is the 2019
+            {{carMake + " " + carModel}} in today's market?
+
+        </div>
+        <script src="./js/myApp.js"></script>
+        <script src="./js/myCtrl.js"></script> -->
+
+        <!-- ****************************Modules slide 30********************* -->
+        <!-- <body ng-app="myNgApp">
+            <div ng-controller="myController">
+                {{message}}
+            </div>
+
+        <script>
+            var ngApp = angular.module('myNgApp', []);
+            ngApp.controller('myController', function($scope){
+                $scope.message = "Hello Developers";
+            });
+        </script> -->
+
+         <!-- ****************************Modules slide 30 b********************* -->
+        <!-- <body ng-app="myNgApp">
+            <div ng-controller="myController">
+                The message from controller: {{message}}<br>
+                <div ng-repeat="L in languages">{{L}} is fun!!!
+            </div>
+
+        <script>
+            var ngApp = angular.module('myNgApp', []);
+            ngApp.controller('myController', function($scope){
+                $scope.message = "Hello Developers";
+                $scope.languages = ['java', 'python', 'javascript','ruby'];
+            });
+        </script> -->
+
+         <!-- ****************************Modules slide 33********************* -->
+        <!-- <body ng-app="myNgApp">
+            <div ng-controller="myController">
+               Enter Message:<input type="text" ng-model="message"><br>
+               <button ng-click="showMsg(message)">Show Message </button>
+            </div>
+
+        <script>
+            var ngApp = angular.module('myNgApp', []);
+            ngApp.controller('myController', function($scope){
+                $scope.message = "Hello Developers!!!";
+
+                $scope.showMsg = function(msg){
+                    alert(msg);
+                };
+            });
+        </script> -->
+
+         <!-- ****************************Modules slide 34********************* -->
+        <body ng-app="myNgApp">
+            <div id="div1" ng-controller="myController1">
+               Message: {{message}}<br>
+            
+                <div id="div2">
+                    Message: {{message}}<br>
+                </div>
+            </div>
+            <div id="div3">
+                Message: {{message}}
+            </div>
+            <div id="div4" ng-controller="myController2">
+               Message: {{message}}<br>
+            </div>
+
+        <script>
+            var ngApp = angular.module('myNgApp', []);
+
+            ngApp.controller('myController1', function($scope){
+                $scope.message = "This is myController1";
+            });
+
+            ngApp.controller('myController2', function($scope){
+                $scope.message = "This is myController2";
+            });
+        </script>
+
+       
+
+    </body>
+</html>
+
+   
+     
+
+     

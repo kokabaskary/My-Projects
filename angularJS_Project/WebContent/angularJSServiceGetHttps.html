@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+     <head>
+        <meta charset="ISO-8859-1">
+        <title>Injecting Dependencies</title>
+        <script src="js/angular.min.js"></script>
+            
+        </head>
+        <body ng-app="DemoApp">
+          
+            <div  ng-controller="DemoController">
+               Enter your name:<input type="text" name="name" ng-model="myName">
+            
+            
+            <table>
+                
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+                <tr ng-repeat= "student in result | orderBy:'Name' | filter:{Name:myName}">
+                    <td>{{student.ID}}</td>
+                    <td>{{student.Name}}</td>
+                    <td>{{student.Email}}</td>
+                 </tr>
+            </table>
+            </div>
+            <script>
+                var app = angular.module("DemoApp",[]);
+                // controller is injected with $scope and https as dependencies
+                app.controller("DemoController", function($scope, $http){
+                    $http.get('https://raw.githubusercontent.com/ahmshahparan/BNY01/master/plist.json?token=AQkwHzRXjf_IKMDFZTA8jEl2Lni7cq-cks5ck-p6wA%3D%3D')
+                    .then(function(response){
+                        $scope.result = response.data.records;
+                    }, function(response){
+                        alert("Error!!!");
+                        // added error message to the precious code
+                    })
+                 });
+                
+                
+            </script>
+        </body>
+</html>
