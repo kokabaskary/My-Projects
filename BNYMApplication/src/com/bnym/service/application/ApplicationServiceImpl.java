@@ -16,8 +16,16 @@ import com.bnym.repository.ApplicantRepository;
 public class ApplicationServiceImpl implements ApplicationService {
 
 	
-	@Autowired
 	private ApplicantRepository repository;
+	
+	public ApplicationServiceImpl() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Autowired
+	public ApplicationServiceImpl(ApplicantRepository repository) {
+		this.repository = repository;
+	}
 	
 	//first method of DAO
 	@Override

@@ -24,12 +24,20 @@ import com.bnym.entity.Applicant;
 import com.bnym.service.application.ApplicationService;
 
 
-
 @Controller
 public class ApplicationController {
 	
+	
+	private ApplicationService applicationService;
+	
+	public ApplicationController() {
+		// TODO Auto-generated constructor stub
+	}
+	
 	@Autowired
-	ApplicationService applicationService;
+	public ApplicationController(ApplicationService applicationService) {
+		this.applicationService = applicationService;
+	}
 	
 	@InitBinder
 	public void InitBinder(WebDataBinder binder) {
@@ -66,10 +74,18 @@ public class ApplicationController {
 			return model;
 
 		}
+//		Shahparan code
+//		@RequestMapping("/allApplication")
+//		public ModelAndView displayAllApplications() {
+//			ModelAndView mav = new ModelAndView("allapplication");
+//			List<Applicant> applicationList = applicationService.getAllApplications();
+//			mav.addObject("applicationList", applicationList);
+//			return mav;
+//		}
 		//=============================================================
 		@RequestMapping("/allApplication")
 		public ModelAndView appList() {
-			ModelAndView mav = new ModelAndView("allapp");
+			ModelAndView mav = new ModelAndView("allapplication");
 			mav.addObject("applicationList", applicationService.getAllApplications());
 			return mav;
 		}

@@ -66,14 +66,7 @@
 			modelAttribute="applicant">
 		
 			
-			<div class="form-group">
-				<label for="id">Applicant Id: </label>
-				<form:input 
-					class="form-control" id="id" path="id" />
-				<!-- Form Error -->
-				<small> <form:errors path="id" cssClass="errormsg" />
-				</small>
-			</div>
+			
 			<div class="form-group">
 				<label for="name">Applicant Name: </label>
 				<form:input type="text" placeholder="Enter Name"

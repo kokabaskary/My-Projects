@@ -14,8 +14,18 @@ import com.bnym.repository.UserRegistrationRepository;
 @Transactional
 public class UserRegistrationServiceImpl implements UserRegistrationService {
 	
-	@Autowired
+	
 	private UserRegistrationRepository repository;
+	
+	public UserRegistrationServiceImpl() {
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Autowired
+	public UserRegistrationServiceImpl(UserRegistrationRepository repository) {
+		this.repository = repository;
+	}
+	
 
 	//first method of DAO
 	@Override
