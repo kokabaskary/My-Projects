@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta charset="ISO-8859-1">
+        <title>Upside-Down Trapezoid Star-Pattern</title>
+        </head>
+        <body>
+            <script>
+            
+  /**
+   * 
+            * Task F. Upside-down trapezoid
+            * Write a program trapezoid.html that prints an upside-down trapezoid of given
+            *  width and height.
+            * However, if the input height is impossibly large for the given width,
+            *  then the program should report
+            * , Impossible shape!
+            * Example 1:Input width: 12
+            * Input height: 5
+            * 
+            * Shape:************ 
+            *        **********  
+            *         ********   
+            *          ******    
+            *           ****
+            * 
+            * Example 2:
+            * Input width: 12
+            * Input height: 7
+            * Impossible shape!
+            * Hint:You can start with the number ofspaces = 0;
+            * stars = width;On each line, 
+            * print that number of spaces followed by that number of stars.
+            *  After that, the number of spaces gets incremented by 1
+            * , while the number of stars gets decremented by 2:
+            * spaces += 1;stars -= 2;
+            */
+
+            var height = prompt("Please Enter Height:" );
+            var width = prompt("Please Enter Width:" );
+            console.log(height);
+            console.log(width);
+                
+                if(height>=10 && width>=20){
+                    console.log("Impossible Shape!");
+                    document.write('Impossible Shape');
+                }else{
+
+                    for (var i = 1; i<=height; i++) {//outer for loop for number of rows
+                    var space = "";
+                    var star = "";
+                    for (var j =2; j <=i; j++) {//inner nested for loop for columns
+                        space += " "; //to print stars in same line
+                        document.write('&nbsp;');//for printing space on the page
+                    }for(var k =height; k>=i; k--){
+                        star += "*";
+                        document.write('*');//for printing space on the page
+                    }
+                    for(var k= height; k>=i; k--){
+                        star += "*";}
+                       
+                        document.write('*');//for printing space on the page
+                        console.log(space,star);
+                        document.write(' <br />');//for line break on page
+        }}
+        </script>
+        </body>
+</html>

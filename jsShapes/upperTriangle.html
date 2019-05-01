@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta charset="ISO-8859-1">
+        <title>Upper Triangle Star-Pattern</title>
+        </head>
+        <body>
+            <script>
+                   
+ /**
+         * Task E. Upper triangle
+         * Write a program upper.html that prints the top-right half of a square,
+         *  given the side length.
+         * Example:Input side length: 5
+         * 
+         * Shape:***** 
+         *       **** 
+         *       ***   
+         *       **
+         *       *
+  */
+             var length = prompt("Please Enter length:" );
+            
+            console.log(length);
+             
+                for (var i = 1; i<=length; i++) {//outer for loop for number of rows
+                var star = "";
+                for (var j = length; j>=i; j--) {//inner nested for loop for columns
+                star += "*"; //to print stars in same line
+                document.write('*');//for printing on the page
+                    }
+                document.write('<br />');//for line break
+                console.log(star);
+        }
+        </script>
+        </body>
+</html>

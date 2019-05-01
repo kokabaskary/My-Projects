@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta charset="ISO-8859-1">
+        <title>Lower Triangle Star-Pattern</title>
+        </head>
+        <body>
+            <script>
+            /**
+        * /**------------------Printing Shapes---------------------
+        * 
+        * Task D. Lower triangle
+        * Write a program lower.html that prints the bottom-left half of a square,
+        *  given the side length.
+        * Example:Input side length: 6
+        * Shape:*
+        *       **
+        *       ***
+        *       ****
+        *       *****
+        *       ******
+        */
+                var sideLength = prompt("Please Enter side length:" );
+                console.log(sideLength);
+                for (var i = 1; i<=sideLength; i++) {//outer for loop for number of rows
+                var star = "";
+                for (var j = 1; j <= i; j++) {//inner nested for loop for columns
+                star += "*"; //to print stars in same line
+                document.write('*');//for printing on the page
+                    }
+                console.log(star);
+                document.write('<br />');//for line break
+        }
+
+       </script>
+        </body>
+</html>

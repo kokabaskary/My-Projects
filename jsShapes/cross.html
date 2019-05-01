@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta charset="ISO-8859-1">
+        <title>Cross Star-Pattern</title>
+        </head>
+        <body>
+            <script>
+             /**------------------Printing Shapes---------------------
+ * 
+        * Task C. Cross
+        * Write a program cross.html that asks the user 
+        * to input the shape size, and prints a diagonal cross of that dimension.
+        * Example:Input size: 8
+        *   Shape:  *      *
+                     *    *
+                      *  *
+                       ** 
+                       **
+                      *  *
+                     *    *
+                    *      *
+        */ 
+
+         var size = prompt("Please Enter Shape Size:" );
+           // var width = prompt("Please Enter Width:" );
+            console.log(size);
+            //console.log(width);
+
+            for(var i = 1; i<size; i++){//Outer loop for number of rows
+                var star = "";
+                var space= " ";
+                    
+                    for(var j=1;j<=size;j++){
+                        
+                //Inner loop for number of columns
+                     if(i==j || i+j==size){
+                     star += "*";//for printing on same line in console
+                     document.write('*');//for printing on the page
+                     }else{
+                        document.write('&nbsp;');//for printing space on the page
+                        star += " ";
+                    }                
+                }
+                console.log(star);
+                document.write('<br />');//for line break on page
+            }//ending of outer for loop
+            </script>
+        </body>
+</html>
