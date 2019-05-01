@@ -21,8 +21,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.bnym.entity.Applicant;
-
-import com.bnym.service.ApplicationService;
+import com.bnym.service.application.ApplicationService;
 
 
 

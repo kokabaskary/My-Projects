@@ -17,12 +17,12 @@ import org.springframework.web.servlet.ModelAndView;
 import com.bnym.entity.Applicant;
 
 import com.bnym.entity.UserRegistration;
-import com.bnym.service.UserService;
+import com.bnym.service.UserService_old;
 @Controller
 public class UserRegistrationController {
 	
 	@Autowired
-	UserService userservice; 
+	UserService_old userservice; 
 	
 	// new user validation and validating that two passwords are similar
 		@RequestMapping(value = "/newUser", method = RequestMethod.POST)

@@ -10,7 +10,7 @@ import com.bnym.entity.Applicant;
 
 
 @Service("applicationService")
-public class ApplicationService {
+public class ApplicationService_old {
 
 	private List<Applicant> applicationList = new ArrayList<>();
 	public List<Applicant> getAllApplications() {
