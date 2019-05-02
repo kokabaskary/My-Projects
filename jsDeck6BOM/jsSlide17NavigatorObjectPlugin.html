@@ -1,0 +1,19 @@
+<html> 
+ <head></head> 
+ <body> 
+   <h3>Detecting Plugins</h3> 
+   <ol id ="myL"></nl>
+   <script>
+     
+    var plugins_no = navigator.plugins.length;
+    for (var i=0; i < plugins_no; i++) {
+        var myL = document.getElementById("myL");
+        var li = document.createElement("li");
+        li.innerHTML ="<b>"+ navigator.plugins[i].name+ "</b>" +
+        ": [filename: " + navigator.plugins[i].filename + "]";
+        myL.appendChild(li);
+      }
+</script>
+ </body> 
+</html>
+

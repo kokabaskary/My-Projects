@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MY</title>
+    </head>
+    <body>
+    <p>Click the buttons below</p>
+    <button type="button" onclick="newWindow()">Open New Window</button>
+    <button type="button" onclick="closeWindow()"> Close Window!</button>
+    <script>
+        var myWindow;
+        function newWindow() {
+    myWindow = window.open("https://perscholas.org/","perscholas", "width=400, height=200, resizable=no, scrollbars=yes, location=yes, menubar = yes");
+    myWindow.focus();
+    // myWindows.blur();
+    }
+    function closeWindow(){
+    myWindow.close();
+    }
+    console.log(window.location.hash);
+       console.log("port" ,window.location.host);
+       console.log(window.location.hostname);
+       console.log(window.location.href);
+       console.log(window.location.pathname);
+       console.log(window.location.port);
+       console.log(window.location.protocol);
+       console.log(window.location.search);
+        </script>
+    </body>
+</html>
