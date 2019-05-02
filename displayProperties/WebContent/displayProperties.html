@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="ISO-8859-1">
+	<title>Display Properties</title>
+		<style>
+			
+			div {/*General div containers*/
+				margin-top: 10px;
+				background-color:grey ;
+				width:250px;
+				height:300px;
+				display:inline-block;
+				}
+
+			div div {/*only div container that are child to that div */
+				
+				background-color:aqua;
+				width:100px;
+				height:100px;
+				/*display:inline-block;*/
+					}
+			span{
+				color: green;
+				}
+			div span{
+				color :yellow
+				}
+		</style>
+	</head>
+	<body>
+		
+	<!--This is the body of the template-->
+	
+			<div>
+				<div>
+					<span style ="color: red;">
+					 This is Inner div 1
+					 </span>
+				</div>
+				<div>
+					<span>
+					This is Inner div 2
+					</span>
+				</div>	 
+			</div>
+					
+			<div>
+				<div>
+					<span>
+					 This is Inner div 1
+					 </span>
+				</div>
+				<div>
+					<span>
+					This is Inner div 2
+					</span>
+				</div>	 
+			</div>
+					
+			<span>Break Time</span>
+			
+		
+		<footer></footer>
+	</body>
+</html>
