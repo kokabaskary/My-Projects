@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+ <html>
+        <head>
+        <meta charset="ISO-8859-1">
+        <title>Insert title here</title>
+        </head>
+        <body>
+            <script>
+                //---------------- javascrit handson  slide 22 day 2
+
+/* Write a program valid.html, which asks the user to input an integer 
+in the range 0 < n < 100. 
+If the number is out of range, the program should keep asking to re-enter until a valid number is input.
+After a valid value is obtained, print this number n squared.
+Ex:
+Please enter an integer: -10
+Please re-enter: 1200
+Please re-enter: 100
+Please re-enter: 7
+Number squared is 49
+Hint: You can use a while or do ... while loop.
+
+        */
+
+    //    var userInput ="";
+        
+    //    var  userInput = prompt("Enter an integer:" );
+    //     console.log(userInput);
+    //     var result = "";
+
+        while(true){
+            let userInput = prompt("Enter an integer:" );
+            if(userInput>0 && userInput<100){
+                console.log(userInput*userInput);
+                break;
+        }}
+      
+       
+    //    if(userInput<='0' && userInput>='100'){
+    //      confirm("Please re-enter: " );
+    //      prompt("Please re-enter: ");
+
+    //     }else{
+    //         result = userInput*userInput;
+    //         alert("Number squared is "+ result);
+    //     }
+
+        // while(userInput>'0'&& userInput<='99'){
+        //      result = userInput*userInput;
+        // alert("Number squared is "+ result); 
+        // }
+        //  prompt("Please re-enter:" + userInput );
+            
+       
+//-----------------------------Hands on slide 23--------------------------
+
+/*Write a program print-interval.html that asks the user to input two integers L and U(representing the lower and upper limits of the interval), and print out all integers in the range L ≤ i < U separated by spaces. Notice that we include the lower limit, but exclude the upper limit.
+Ex:
+Please enter L: -5
+Please enter U: 10
+-5 -4 -3 -2 -1 0 1 2 3 4 5 6 7 8 9*/
+ 
+//         var  userInputLowerLimit = prompt("Please enter L:" );
+//         var   userInputUpperLimit =  prompt("Please enter U :" );
+//         var s="";
+//         console.log(userInputLowerLimit);
+//         console.log(userInputUpperLimit);
+//             var i = userInputLowerLimit;
+//             for(i = userInputLowerLimit; i<userInputUpperLimit; i++){
+//             s += i + " ";
+//             }
+//   alert(s);      
+// console.log(s); -->
+
+
+//-------------------Hands on Slide 24-----------------------
+
+// Write a program edit-array.html that creates an array of 10 integers, and provides the user with an interface to edit any of its elements. Specifically, it should work as follows:
+// Create an array myData of 10 integers.
+// Fill all its cells with value 1 (using a for loop).
+// Print all elements of the array on the console.
+// Ask the user to input the cell index i, and its new value v.
+// If the index i is within the array range (0 ≤ i < 10), update the asked cell, myData[i] = v, and go back to the step c. Otherwise, if index i is out of range, the program exits.
+// The program should keep running until the user inputs an out-of-range (invalid) index.
+ 
+    //   var myData =new Array(10);//1.an array myData of 10 integers.
+    //  for(var a =0; a<myData.length; a++){
+    //      myData[a]=1;
+    //      //2.Fill all its cells with value 1 (using a for loop).
+    //  }
+    // console.log(myData);//3.Print all elements of the array on the console.
+
+    // var userInputI =prompt("Please input cell index 'i':");
+    // var userInputV =prompt("Please input new value 'V' of index 'i':");
+
+    // if(userInputI >= '0' || userInputI<10){
+    //     myData[userInputI] = userInputV;
+    //     myData += userInputV + ",";
+    //     alert(myData);
+    //     console.log(myData);
+
+    // }else if(userInputI < '0' && userInputI>=10){
+       
+    //     alert("out-of-range (invalid) index");
+         
+    // } 
+
+
+    
+            </script>
+        </body>
+</html>

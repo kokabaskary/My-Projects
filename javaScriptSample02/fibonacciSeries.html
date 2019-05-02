@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+        <head>
+        <meta charset="ISO-8859-1">
+        <title>Fibonacci Series</title>
+        </head>
+        <body>
+            <script>
+               /* Write a program fibonacci.html, which uses an array of 
+               integers to compute and print all Fibonacci numbers 
+               from F(0) to F(59).*/
+
+                var fibonacci = []; // Initialize array!
+               fibonacci[0]= 0;
+               fibonacci[1]= 1;
+            // //    var sum ="";
+               document.write(fibonacci[0] +","+ fibonacci[1]);
+            //    console.log(fibonacci[0] +","+ fibonacci[1]);
+
+               for(var i =2; i<=10; i++){
+                   // Next fibonacci number = previous + one before previous
+                // Translated to JavaScript:
+           
+                   fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
+                    document.write(","+ fibonacci[i]);
+          
+                    console.log(fibonacci[i]);
+               }
+
+            </script>
+        </body>
+</html>

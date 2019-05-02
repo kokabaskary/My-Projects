@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+ <html>
+        <head>
+        <meta charset="ISO-8859-1">
+        <title>Insert title here</title>
+        </head>
+        <body>
+            <script type ="text/javascript">
+                //----------------simple algorithm slide 48-49 javascrit day 1
+
+/* ❏ create a program that would ask the user for a arithmetic expression, 
+        then this program would separate all operands and all number 
+        (For this time, we will only be dealing with +, - and ^ (power))
+        ❏Ex: ❏Expression: 23 + 3 - 3^❏Operand = “+|-|^| //using | as a seperator
+        ❏nums = “23|3|3|
+
+    Task 1:❏Take use input and store it in a variable
+          Task 2: Separate operand and numbers.
+        */
+
+        var userInput ="";
+        var operand=""; //separate all operands
+        var nums ="";       //separate all numbers.
+        const SEPARATOR ="|";//SEPARATOR - constant variables with const keyword
+
+        //1:❏Take use input and store it in a variable
+        userInput = prompt("Enter an Arithmetic Expression:");
+        console.log(userInput);
+
+      /*  for(let i=0; i<userInput.length; i++){
+            if(userInput[i]>='0' && userInput[i]<='9'){
+                nums += userInput[i] + SEPARATOR;
+                }else if(userInput[i] == "+" ||
+                        userInput[i] == "-" ||
+                        userInput[i] == "^"){
+                            operand += userInput[i] + SEPARATOR;
+                        }}*/
+        
+    //  debugger;
+        for(let i=0; i<userInput.length; i++){
+            if(userInput[i]>='0' && userInput[i]<='9'){
+               while(i< userInput.length
+                        && userInput[i] >= '0'
+                        && userInput[i] <= '9'){
+                        nums += userInput[i];
+                        i++;}
+                        nums +=SEPARATOR;
+                        i--;
+                }else if(userInput[i] == "+" ||
+                        userInput[i] == "-" ||
+                        userInput[i] == "^"){
+                            operand += userInput[i] + SEPARATOR;
+                        }}
+
+         console.log("numbers" , nums);
+        console.log("operands" , operand);
+    
+            </script>
+        </body>
+</html>
