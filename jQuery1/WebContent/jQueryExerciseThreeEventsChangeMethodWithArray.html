@@ -1,0 +1,74 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Executing a Function on Change Event in jQuery</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+
+        var arrayVendor = [];
+            for(i=0; i<=10; i++){
+                arrayVendor[i] = "BNYM vendor" +i;
+                 }
+                    console.log(arrayVendor);
+                    console.log(arrayVendor.length);
+
+         $(document).ready(function(){
+
+                 for(i=0; i<=10; i++){
+                     var vVendorName ="bnyMellon" + i;
+                     $("#vendor").append("<option>" +vVendorName +"</option>");
+                     }
+
+                 $("#vendor").change(function(){
+                        var selectedOption = $(this).find(":selected").val();
+                        alert("You have selected  the Vendor- " + selectedOption);
+                     });
+                });
+
+//***************************TABLE***************************************************
+               
+
+                 $(document).ready(function(){
+
+                 for(i=0; i<=10; i++){
+                     $("#vendorTable").append("<tr><td>" +i +"</td><td>" +arrayVendor[i] +"</td></tr>");
+                     
+                     }
+//***************************TABLE***************************************************
+
+
+                 $("#vendor").change(function(){
+                        var selectedOption = $(this).find(":selected").val();
+                        alert("You have selected  the Vendor- " + selectedOption);
+                     });
+                });
+
+            
+     
+    </script>
+    </head>
+    <body>
+        
+        <div id="divTable">
+            <table id= "vendorTable">
+                <tr>
+                    <th>ID</th>
+                    <th>Vendor Name</th>
+                </tr>
+                <tr>
+                    <td></td><br/>
+                    <td></td><br/>
+                </tr>
+            </table>
+        </div>
+        <form>
+            <label>Vendor:</label>
+            <select id ="vendor">
+                
+            </select>    
+        </form>
+        <p><strong>Note:</strong> Select any value from the dropdown select and see the result.</p>
+</body>
+</html>      
+ 
+

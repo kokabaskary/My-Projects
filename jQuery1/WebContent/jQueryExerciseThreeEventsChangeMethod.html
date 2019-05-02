@@ -1,0 +1,41 @@
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Executing a Function on Change Event in jQuery</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#city").change(function(){
+            var selectedOption = $(this).find(":selected").val();
+            alert("You have selected the City - " + selectedOption);
+        });
+    });
+     $(document).ready(function(){
+        $("#town").change(function(){
+            var selectedOption = $(this).find(":selected").val();
+            alert("You have selected  the Town- " + selectedOption);
+        });
+    });
+    </script>
+    </head>
+    <body>
+        <form>
+            <label>City:</label>
+            <select id ="city">
+                <option>London</option>
+                <option>Paris</option>
+                <option>New York</option>
+            </select>
+            <label>Towns:</label>
+            <select id = "town">
+                <option >Queens</option>
+                <option>Manhattan</option>
+                <option>Staten Island</option>
+            </select>
+           
+        </form>
+        <p><strong>Note:</strong> Select any value from the dropdown select and see the result.</p>
+</body>
+</html>      
+ 
+
