@@ -1,0 +1,30 @@
+<html>
+ <head>
+     <title>JASON</title>
+ </head>
+ <body>
+  <button type = "button" id = "button">Updated The HTML DOM</button>
+  <script>
+    document.getElementById("button").onclick = makeAsynchronousRequestToWebserver;
+  function makeAsynchronousRequestToWebserver() {
+     var request =  new XMLHttpRequest(); 
+     request.onreadystatechange = function() {
+      if (request.readyState == 4) {updatedDOM(request);}}
+    request.open("GET", 'http://localhost:8080/testApp/data.json'); 
+    request.send(null);}
+ function updatedDOM(request) {
+    var jsonDoc = JSON.parse(request.responseText);
+    var ol = document.createElement("ol");
+    for (var i in jsonDoc) {
+     var employee = jsonDoc[i];
+     var li = document.createElement("li");
+     console.log(jsonDoc[i]);
+     for (var j in employee) {
+      var div = document.createElement("div");
+      div.textContent= employee[j];
+      li.appendChild(div);}
+     ol.appendChild(li);}
+    document.body.appendChild(ol);}
+  </script>
+ </body>
+</html>

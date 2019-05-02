@@ -1,0 +1,26 @@
+<html>
+ <head></head>
+ <body>
+  <button type = "button" id ="button">
+   Making Asynchronous Request to the Webserver</button>
+  <script>
+    var button = document.getElementById("button");
+    button.onclick = makeAsynchronousRequestToWebserver;
+    function makeAsynchronousRequestToWebserver() {
+     //use the code in the previous example of full browser support
+     var request =  new XMLHttpRequest(); 
+     request.onreadystatechange = function() {
+     //The Web server returns the result containing an XML document.  
+      if (request.readyState == 4) {
+        console.log("see next example to learn how to processes the result")
+        //the request is completed, now check its status
+        if(request.status == 200){console.log("our file has loaded! " + request.status); }
+        else{console.log("Status error: " + request.status);}
+      }
+     }
+    request.open("GET", 'http://localhost:8080/testApp/This_Does_NOT_exist.xml');
+    request.send(null);
+   }
+  </script>
+ </body>
+</html>
