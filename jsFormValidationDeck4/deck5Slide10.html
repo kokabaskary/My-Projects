@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+    <div>getElementsByName() will also return elements that have an id                                    attribute with the specified value. For compatibility,
+         you should be careful not to use the same string as both a name and an ID. 
+     </div>
+    <ul id="items"class="list-group">
+        <li name="list-group-item">Item 1</li>
+        <li name="list-group-item">Item 2</li>
+    <li name="list-group-item">Item 3</li></ul>
+    <script>
+    // var items = document.getElementsByName('list-group-item');
+    // for (i in items) {
+    //     console.log(items[i]);}
+
+    var li = document.getElementsByTagName("li");
+          //var myArr = li.slice(1,3);     
+           var myArr = Array.prototype.slice.call(li,1,3);  
+               for (i in myArr)
+                {        console.log(myArr[i]);      }
+        </script>
+</body>
+</html>
